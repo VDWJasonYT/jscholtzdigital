@@ -1,4 +1,4 @@
-import { ShieldCheck, Users, Gauge, Globe2 } from "lucide-react";
+import { Rocket, Smartphone, Gauge, LifeBuoy } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { BadgeRow } from "./ui";
 
@@ -6,24 +6,24 @@ type Benefit = { icon: LucideIcon; title: string; desc: string };
 
 const BENEFITS: Benefit[] = [
   {
-    icon: ShieldCheck,
-    title: "Security built in",
-    desc: "Every build is threat-modelled, reviewed and hardened before launch — not patched after something goes wrong.",
+    icon: Rocket,
+    title: "Fast turnaround",
+    desc: "Clear scope, quick delivery. Clear scope and a fixed quote before we start.",
   },
   {
-    icon: Users,
-    title: "Direct with the builders",
-    desc: "You work with the two people writing the code. No account managers, no handovers, no telephone game.",
+    icon: Smartphone,
+    title: "Mobile-first",
+    desc: "Every build is built to work well on phones, tablets and desktop.",
   },
   {
     icon: Gauge,
-    title: "Shipped, not stalled",
-    desc: "Tight scope, weekly progress and working software you can click through — most projects land in one to three months.",
+    title: "Built for speed & SEO",
+    desc: "Lightweight, optimised code built with search engines and visitors in mind.",
   },
   {
-    icon: Globe2,
-    title: "Built for global scale",
-    desc: "We ship for clients in South Africa, Australia, New Zealand and beyond, with infrastructure and compliance to match.",
+    icon: LifeBuoy,
+    title: "One-on-one support",
+    desc: "You deal directly with me — no account managers, no runaround.",
   },
 ];
 
@@ -34,12 +34,12 @@ export default function WhyChooseMe() {
       className="bg-white border-t border-gray-100 pt-16 sm:pt-20 lg:pt-28 pb-16 sm:pb-20 lg:pb-24"
     >
       <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
-        <BadgeRow number="4" label="Why work with us" />
+        <BadgeRow number="5" label="Why work with me" />
         <h2
           className="font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-10 sm:mb-14"
           style={{ fontSize: "clamp(1.5rem, 4vw, 3.2rem)" }}
         >
-          Secure, dependable,
+          Direct, dependable,
           <br />
           and detail-obsessed.
         </h2>

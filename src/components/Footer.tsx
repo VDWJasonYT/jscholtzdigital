@@ -1,20 +1,29 @@
 import { Mail, MessageCircle, Linkedin } from "lucide-react";
-import { EMAIL, WHATSAPP_URL, LINKEDIN_URL } from "../lib/contact";
+
+const EMAIL = "Mrjasonscholtz@gmail.com";
+const WHATSAPP_URL = "https://wa.me/27615990085";
+const LINKEDIN_URL = "https://www.linkedin.com/company/jscholtz-digital/";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white border-t border-white/10">
       <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <img
-          src="/assets/wordmark-light.png"
-          alt="JScholtz Digital"
-          className="h-5 w-auto"
-        />
+        <div className="flex items-center gap-3">
+          <div className="w-9 h-9 bg-gray-900 ring-1 ring-white/15 rounded-full flex items-center justify-center">
+            <span className="text-white text-[11px] font-bold tracking-tight">
+              JS
+            </span>
+          </div>
+          <span className="text-[14px] font-semibold">JScholtz Digital</span>
+        </div>
 
-        <p className="text-[12px] text-gray-500 text-center">
-          © 2026 JScholtz Digital. Cybersecurity &amp; Software Development
-          Technologies.
-        </p>
+        <div className="text-[12px] text-gray-500 text-center max-w-md">
+          <p>© 2026 JScholtz Digital · Secunda, Mpumalanga, South Africa · Not VAT registered</p>
+          <p className="mt-1">
+            Privacy: we only use the details you send us to respond to your
+            enquiry, and we don't sell or share them, in line with POPIA.
+          </p>
+        </div>
 
         <div className="flex items-center gap-4">
           <a

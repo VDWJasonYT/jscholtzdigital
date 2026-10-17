@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jscholtzdigital.com/sitemap.xml

@@ -1,7 +1,9 @@
 import { BadgeRow, BlueButton } from "./ui";
 
-const SMALL_IMG = "/assets/med-vault.webp";
-const LARGE_IMG = "/assets/review-wolf.webp";
+const SMALL_IMG =
+  "/media/about-small.webp";
+const LARGE_IMG =
+  "/media/about-large.webp";
 
 export default function About() {
   return (
@@ -16,7 +18,7 @@ export default function About() {
             className="font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-12 sm:mb-16 lg:mb-28"
             style={{ fontSize: "clamp(1.5rem, 4vw, 3.2rem)" }}
           >
-            A two-person studio,
+            A one-person studio,
             <br />
             obsessed with results.
           </h2>
@@ -25,24 +27,23 @@ export default function About() {
         {/* Mobile / tablet */}
         <div className="lg:hidden px-5 sm:px-8">
           <p className="text-[15px] leading-[1.6] font-medium text-gray-900">
-            We're a two-person team building secure, high-quality software for
-            small, medium and large enterprises. We handle the full build —
-            product engineering, mobile and web apps, and the security work that
-            keeps them safe — for clients across South Africa and abroad.
+            I'm Jason Scholtz, the developer behind JScholtz Digital. Based in
+            Secunda, I work with South African small businesses to design, build and maintain
+            websites that look sharp, load fast and actually convert.
           </p>
           <div className="mt-6">
-            <BlueButton text="About the studio" href="#services" />
+            <BlueButton text="See prices" href="#pricing" />
           </div>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-5">
             <img
               src={SMALL_IMG}
-              alt="Med Vault — health tracking app built by JScholtz Digital"
+              alt="JScholtz Digital work sample"
               loading="lazy"
               className="sm:w-[45%] w-full aspect-[438/346] rounded-xl sm:rounded-2xl object-cover"
             />
             <img
               src={LARGE_IMG}
-              alt="Review Wolf — reputation platform built by JScholtz Digital"
+              alt="JScholtz Digital project preview"
               loading="lazy"
               className="sm:w-[55%] w-full aspect-[900/600] rounded-xl sm:rounded-2xl object-cover"
             />
@@ -54,7 +55,7 @@ export default function About() {
           <div className="self-end">
             <img
               src={SMALL_IMG}
-              alt="Med Vault — health tracking app built by JScholtz Digital"
+              alt="JScholtz Digital work sample"
               loading="lazy"
               className="w-full aspect-[438/346] rounded-2xl object-cover"
             />
@@ -63,18 +64,18 @@ export default function About() {
           <div className="self-start flex justify-end">
             <div>
               <p className="text-[16px] leading-[1.65] font-medium text-gray-900 whitespace-nowrap">
-                We're a two-person team building secure,
+                I'm Jason Scholtz, the developer behind
                 <br />
-                high-quality software for small, medium
+                JScholtz Digital. Based in Secunda, I work with
                 <br />
-                and large enterprises — from product
+                South African small businesses to design, build
                 <br />
-                engineering and mobile apps to the
+                and maintain websites that look sharp,
                 <br />
-                security work that keeps them safe.
+                load fast and actually convert.
               </p>
               <div className="mt-8">
-                <BlueButton text="About the studio" href="#services" />
+                <BlueButton text="See prices" href="#pricing" />
               </div>
             </div>
           </div>
@@ -82,7 +83,7 @@ export default function About() {
           <div className="self-end">
             <img
               src={LARGE_IMG}
-              alt="Review Wolf — reputation platform built by JScholtz Digital"
+              alt="JScholtz Digital project preview"
               loading="lazy"
               className="w-full aspect-[3/2] rounded-2xl object-cover"
             />

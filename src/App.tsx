@@ -1,10 +1,13 @@
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
+import Process from "./components/Process";
+import Pricing from "./components/Pricing";
 import Portfolio from "./components/Portfolio";
 import WhyChooseMe from "./components/WhyChooseMe";
-import Pricing from "./components/Pricing";
+import Faq from "./components/Faq";
 import Contact from "./components/Contact";
+import ClosingCta from "./components/ClosingCta";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -13,10 +16,13 @@ export default function App() {
       <Hero />
       <About />
       <Services />
+      <Process />
       <Pricing />
       <Portfolio />
       <WhyChooseMe />
+      <Faq />
       <Contact />
+      <ClosingCta />
       <Footer />
     </div>
   );

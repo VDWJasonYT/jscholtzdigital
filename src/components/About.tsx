@@ -37,13 +37,13 @@ export default function About() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-5">
             <img
               src={SMALL_IMG}
-              alt="JScholtz Digital work sample"
+              alt="Person working on a website colour palette on a laptop"
               loading="lazy"
               className="sm:w-[45%] w-full aspect-[438/346] rounded-xl sm:rounded-2xl object-cover"
             />
             <img
               src={LARGE_IMG}
-              alt="JScholtz Digital project preview"
+              alt="Two people planning a website project roadmap on a whiteboard"
               loading="lazy"
               className="sm:w-[55%] w-full aspect-[900/600] rounded-xl sm:rounded-2xl object-cover"
             />
@@ -55,7 +55,7 @@ export default function About() {
           <div className="self-end">
             <img
               src={SMALL_IMG}
-              alt="JScholtz Digital work sample"
+              alt="Person working on a website colour palette on a laptop"
               loading="lazy"
               className="w-full aspect-[438/346] rounded-2xl object-cover"
             />
@@ -83,7 +83,7 @@ export default function About() {
           <div className="self-end">
             <img
               src={LARGE_IMG}
-              alt="JScholtz Digital project preview"
+              alt="Two people planning a website project roadmap on a whiteboard"
               loading="lazy"
               className="w-full aspect-[3/2] rounded-2xl object-cover"
             />

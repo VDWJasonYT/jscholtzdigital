@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { BadgeRow } from "./ui";
+import LazyVideo from "./LazyVideo";
 
 const VIDEO_1 =
   "/media/demo-narrativ.mp4";
@@ -52,14 +53,7 @@ export default function Portfolio() {
           {/* Card 1 — Narrativ */}
           <div>
             <div className="group relative aspect-[329/246] rounded-2xl overflow-hidden bg-[#1a1d2e] cursor-pointer">
-              <video
-                src={VIDEO_1}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover"
-              />
+              <LazyVideo src={VIDEO_1} poster="/media/demo-narrativ-poster.webp" label="Narrativ demo project: animated 3D showcase page" className="w-full h-full object-cover" />
               <span className="absolute top-4 left-4 bg-white/90 text-gray-900 text-[11px] font-semibold uppercase tracking-wide rounded-full px-3 py-1">Demo project</span>
               <div className="absolute bottom-4 left-4 h-9 w-9 group-hover:w-[148px] bg-white rounded-full flex items-center overflow-hidden transition-all duration-300 ease-in-out">
                 <span className="h-9 w-9 shrink-0 flex items-center justify-center">
@@ -70,7 +64,7 @@ export default function Portfolio() {
                 </span>
               </div>
             </div>
-            <p className="text-[12px] text-gray-500 mt-4">Demo project · not a client site</p>
+            <p className="text-[12px] text-gray-600 mt-4">Demo project · not a client site</p>
             <p className="text-[13px] sm:text-[14px] text-gray-600 mt-1 leading-relaxed">
               A concept build showing an interactive, animated showcase page.
             </p>
@@ -82,14 +76,7 @@ export default function Portfolio() {
           {/* Card 2 — Luminar */}
           <div>
             <div className="group relative aspect-square rounded-2xl overflow-hidden bg-[#6b6b6b] cursor-pointer">
-              <video
-                src={VIDEO_2}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover"
-              />
+              <LazyVideo src={VIDEO_2} poster="/media/demo-luminar-poster.webp" label="Luminar demo project: brand landing page" className="w-full h-full object-cover" />
               <span className="absolute top-4 left-4 bg-white/90 text-gray-900 text-[11px] font-semibold uppercase tracking-wide rounded-full px-3 py-1">Demo project</span>
               <div className="absolute bottom-4 left-4 h-9 w-9 group-hover:w-[150px] bg-[#1E7FEB] rounded-full flex items-center overflow-hidden transition-all duration-300 ease-in-out">
                 <span className="h-9 w-9 shrink-0 flex items-center justify-center">
@@ -103,7 +90,7 @@ export default function Portfolio() {
                 </span>
               </div>
             </div>
-            <p className="text-[12px] text-gray-500 mt-4">Demo project · not a client site</p>
+            <p className="text-[12px] text-gray-600 mt-4">Demo project · not a client site</p>
             <p className="text-[13px] sm:text-[14px] text-gray-600 mt-1 leading-relaxed">
               A concept build showing a clean, fast brand landing page.
             </p>

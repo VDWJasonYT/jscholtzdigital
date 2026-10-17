@@ -27,12 +27,12 @@ export default function Pricing() {
             <div key={p.title} className={`rounded-2xl p-6 sm:p-7 flex flex-col ${p.featured ? "bg-gray-900 text-white" : "bg-[#F5F5F5] text-gray-900"}`}>
               <h3 className="text-[16px] sm:text-[17px] font-semibold mb-3">{p.title}</h3>
               <p className="text-[28px] font-medium tracking-[-0.02em] mb-3">
-                {p.from && <span className={`text-[13px] font-normal mr-1 ${p.featured ? "text-gray-400" : "text-gray-500"}`}>from</span>}
+                {p.from && <span className={`text-[13px] font-normal mr-1 ${p.featured ? "text-gray-400" : "text-gray-600"}`}>from</span>}
                 {p.price}
-                {p.per && <span className={`text-[13px] font-normal ml-1 ${p.featured ? "text-gray-400" : "text-gray-500"}`}>{p.per}</span>}
+                {p.per && <span className={`text-[13px] font-normal ml-1 ${p.featured ? "text-gray-400" : "text-gray-600"}`}>{p.per}</span>}
               </p>
               <p className={`text-[13px] sm:text-[14px] leading-relaxed ${p.featured ? "text-gray-300" : "text-gray-600"}`}>{p.desc}</p>
-              {p.note && <p className="text-[12px] mt-3 text-gray-500">{p.note}</p>}
+              {p.note && <p className="text-[12px] mt-3 text-gray-600">{p.note}</p>}
             </div>
           ))}
         </div>

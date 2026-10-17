@@ -171,6 +171,7 @@ export default function Hero() {
           menuOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
         aria-hidden={!menuOpen}
+        {...(!menuOpen ? { inert: "" } : {})}
       >
         <div
           onClick={() => setMenuOpen(false)}

@@ -1,11 +1,22 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Clock, MapPin, Menu, X } from "lucide-react";
 import { Shader, Swirl, ChromaFlow, FlutedGlass, FilmGrain } from "shaders/react";
+import HeroDashboard from "./graphics/HeroDashboard";
 
 const NAV_LINKS = [
   { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Demos", href: "#portfolio" },
+  { label: "FAQ", href: "#faq" },
+];
+
+const MENU_LINKS = [
   { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Process", href: "#process" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Demos", href: "#portfolio" },
+  { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -73,7 +84,7 @@ export default function Hero() {
   const time = useLocalTime();
 
   return (
-    <section className="relative min-h-screen w-full bg-[#EFEFEF] overflow-hidden flex flex-col">
+    <section className="relative w-full bg-[#EFEFEF] overflow-hidden lg:min-h-screen lg:flex lg:flex-col">
       {/* Animated shader overlay */}
       <div className="absolute inset-0 z-10 pointer-events-none">
         {gpuFailed ? (
@@ -189,7 +200,7 @@ export default function Hero() {
             {time} in Secunda
           </span>
           <div className="mt-6 flex flex-col gap-4">
-            {NAV_LINKS.map((l) => (
+            {MENU_LINKS.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
@@ -213,69 +224,62 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Spacer */}
-      <div className="flex-1" />
+      <div className="relative z-20 mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 pt-8 sm:pt-10 pb-14 sm:pb-16 lg:pt-4 lg:pb-16 lg:flex-1 lg:flex lg:items-center">
+        <div className="grid w-full items-center gap-8 lg:grid-cols-2 lg:gap-6">
+          <div>
+            <p className="text-[13px] sm:text-[14px] text-gray-900 tracking-wide mb-4 sm:mb-6">
+              JScholtz Digital
+            </p>
 
-      {/* Hero content */}
-      <div className="relative z-20 mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 pb-14 sm:pb-16 lg:pb-20">
-        <p className="text-[13px] sm:text-[14px] text-gray-900 tracking-wide mb-5 sm:mb-8">
-          JScholtz Digital — Web Development &amp; Digital Solutions
-        </p>
+            <h1
+              className="font-medium leading-[0.98] tracking-[-0.03em] text-gray-900"
+              style={{ fontSize: "clamp(2.7rem, 10vw, 4.8rem)" }}
+            >
+              Secure. Simple. Local.
+            </h1>
 
-        <h1
-          className="font-medium leading-[1.08] tracking-[-0.03em] text-gray-900"
-          style={{ fontSize: "clamp(1.75rem, 7vw, 4.2rem)" }}
-        >
-          <span className="sm:hidden">
-            We build fast, modern websites that help South African small businesses grow
-            online.
-          </span>
-          <span
-            className="hidden sm:block"
-            style={{ fontSize: "clamp(2.5rem, 5vw, 4.2rem)" }}
-          >
-            We build fast, modern websites
-            <br />
-            that help South African small businesses
-            <br />
-            grow online.
-          </span>
-        </h1>
+            <p className="mt-4 text-[15px] sm:text-[18px] leading-snug text-gray-800">
+              For small businesses in Secunda, Mpumalanga.
+            </p>
 
-        {/* CTA row */}
-        <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
-          <a
-            href="#contact"
-            className="group flex items-center gap-2 bg-[#1E7FEB] hover:bg-[#1663C4] text-white text-[13px] sm:text-[14px] rounded-full pl-5 sm:pl-6 pr-2 py-2 transition-colors duration-300"
-          >
-            <TextRoll text="Get started" />
-            <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center">
-              <ArrowRight
-                size={16}
-                className={`text-[#1E7FEB] transition-transform duration-500 ${EASE} group-hover:-rotate-45`}
-              />
-            </span>
-          </a>
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
+              <a
+                href="#contact"
+                className="group flex items-center gap-2 bg-[#1E7FEB] hover:bg-[#1663C4] text-white text-[13px] sm:text-[14px] rounded-full pl-5 sm:pl-6 pr-2 py-2 transition-colors duration-300"
+              >
+                <TextRoll text="Get started" />
+                <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center">
+                  <ArrowRight
+                    size={16}
+                    className={`text-[#1E7FEB] transition-transform duration-500 ${EASE} group-hover:-rotate-45`}
+                  />
+                </span>
+              </a>
 
-          <a
-            href="#portfolio"
-            className="group flex items-center gap-1.5 text-[13px] sm:text-[14px] text-gray-900 font-medium"
-          >
-            <span className="group-hover:underline underline-offset-4">
-              View demos
-            </span>
-            <ArrowRight
-              size={14}
-              className="transition-transform group-hover:translate-x-1"
-            />
-          </a>
+              <a
+                href="#portfolio"
+                className="group flex items-center gap-1.5 text-[13px] sm:text-[14px] text-gray-900 font-medium"
+              >
+                <span className="group-hover:underline underline-offset-4">
+                  View demos
+                </span>
+                <ArrowRight
+                  size={14}
+                  className="transition-transform group-hover:translate-x-1"
+                />
+              </a>
 
-          {/* Location badge */}
-          <div className="flex items-center gap-2 bg-white rounded-[4px] px-3 py-2 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-            <MapPin size={16} className="text-[#1E7FEB]" aria-hidden="true" />
-            <span className="text-[13px] sm:text-[14px] font-medium text-gray-900">
-              Based in Secunda, Mpumalanga
-            </span>
+              <div className="flex items-center gap-2 bg-white rounded-[4px] px-3 py-2 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+                <MapPin size={16} className="text-[#1E7FEB]" aria-hidden="true" />
+                <span className="text-[13px] sm:text-[14px] font-medium text-gray-900">
+                  Based in Secunda, Mpumalanga
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div aria-hidden="true">
+            <HeroDashboard />
           </div>
         </div>
       </div>

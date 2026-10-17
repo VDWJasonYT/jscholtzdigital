@@ -29,7 +29,7 @@ export default function About() {
           <p className="text-[15px] leading-[1.6] font-medium text-gray-900">
             I'm Jason Scholtz, the developer behind JScholtz Digital. Based in
             Secunda, I work with South African small businesses to design, build and maintain
-            websites that look sharp, load fast and actually convert.
+            websites that look sharp, load fast and stay secure.
           </p>
           <div className="mt-6">
             <BlueButton text="See prices" href="#pricing" />
@@ -72,7 +72,7 @@ export default function About() {
                 <br />
                 and maintain websites that look sharp,
                 <br />
-                load fast and actually convert.
+                load fast and stay secure.
               </p>
               <div className="mt-8">
                 <BlueButton text="See prices" href="#pricing" />

@@ -8,7 +8,7 @@ const BENEFITS: Benefit[] = [
   {
     icon: Rocket,
     title: "Fast turnaround",
-    desc: "Clear scope, quick delivery. Clear scope and a fixed quote before we start.",
+    desc: "A clear scope and a fixed quote before I start.",
   },
   {
     icon: Smartphone,
@@ -23,7 +23,7 @@ const BENEFITS: Benefit[] = [
   {
     icon: LifeBuoy,
     title: "One-on-one support",
-    desc: "You deal directly with me — no account managers, no runaround.",
+    desc: "You deal directly with me. No account managers, no runaround.",
   },
 ];
 
@@ -31,10 +31,10 @@ export default function WhyChooseMe() {
   return (
     <section
       id="why"
-      className="bg-white border-t border-gray-100 pt-16 sm:pt-20 lg:pt-28 pb-16 sm:pb-20 lg:pb-24"
+      className="bg-[#F5F5F5] pt-16 sm:pt-20 lg:pt-28 pb-16 sm:pb-20 lg:pb-24"
     >
       <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
-        <BadgeRow number="5" label="Why work with me" />
+        <BadgeRow number="6" label="Why work with me" />
         <h2
           className="font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-10 sm:mb-14"
           style={{ fontSize: "clamp(1.5rem, 4vw, 3.2rem)" }}

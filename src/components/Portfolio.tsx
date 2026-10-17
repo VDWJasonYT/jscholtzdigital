@@ -33,11 +33,11 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="bg-[#F5F5F5] pt-16 sm:pt-20 lg:pt-28 pb-16 sm:pb-20 lg:pb-28"
+      className="bg-white pt-16 sm:pt-20 lg:pt-28 pb-16 sm:pb-20 lg:pb-28"
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <div className="px-5 sm:px-8 lg:px-12">
-          <BadgeRow number="4" label="Demo projects" border="border-gray-300" />
+          <BadgeRow number="5" label="Demo projects" border="border-gray-300" />
           <h2
             className="font-medium leading-[1.08] tracking-[-0.03em] text-gray-900 mb-10 sm:mb-14 lg:mb-16"
             style={{ fontSize: "clamp(2.5rem, 5vw, 4.2rem)" }}
@@ -50,7 +50,7 @@ export default function Portfolio() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-7 px-5 sm:px-8 lg:px-12">
-          {/* Card 1 — Narrativ */}
+          {/* Narrativ demo */}
           <div>
             <div className="group relative aspect-[329/246] rounded-2xl overflow-hidden bg-[#1a1d2e] cursor-pointer">
               <LazyVideo src={VIDEO_1} poster="/media/demo-narrativ-poster.webp" label="Narrativ demo project: animated 3D showcase page" className="w-full h-full object-cover" />
@@ -64,7 +64,7 @@ export default function Portfolio() {
                 </span>
               </div>
             </div>
-            <p className="text-[12px] text-gray-600 mt-4">Demo project · not a client site</p>
+            <p className="text-[12px] text-gray-600 mt-4">Demo project. Not a client site.</p>
             <p className="text-[13px] sm:text-[14px] text-gray-600 mt-1 leading-relaxed">
               A concept build showing an interactive, animated showcase page.
             </p>
@@ -73,7 +73,7 @@ export default function Portfolio() {
             </h3>
           </div>
 
-          {/* Card 2 — Luminar */}
+          {/* Luminar demo */}
           <div>
             <div className="group relative aspect-square rounded-2xl overflow-hidden bg-[#6b6b6b] cursor-pointer">
               <LazyVideo src={VIDEO_2} poster="/media/demo-luminar-poster.webp" label="Luminar demo project: brand landing page" className="w-full h-full object-cover" />
@@ -90,7 +90,7 @@ export default function Portfolio() {
                 </span>
               </div>
             </div>
-            <p className="text-[12px] text-gray-600 mt-4">Demo project · not a client site</p>
+            <p className="text-[12px] text-gray-600 mt-4">Demo project. Not a client site.</p>
             <p className="text-[13px] sm:text-[14px] text-gray-600 mt-1 leading-relaxed">
               A concept build showing a clean, fast brand landing page.
             </p>
@@ -100,7 +100,7 @@ export default function Portfolio() {
           </div>
         </div>
         <p className="px-5 sm:px-8 lg:px-12 mt-8 text-[13px] text-gray-600">
-          These are demo projects that show our style and skills. They are not paid client work.
+          These are demo projects that show my style and skills. They are not paid client work.
         </p>
       </div>
     </section>

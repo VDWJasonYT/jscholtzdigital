@@ -84,8 +84,8 @@ export default function Portfolio() {
               Altyd Lekker
             </h3>
             <p className="text-[13px] sm:text-[15px] text-gray-600 mt-3 leading-relaxed max-w-md">
-              Marloth Park self-catering stay site: booking paths, mobile-first,
-              live on altydlekker.co.za.
+              Paid self-catering website build for a Marloth Park stay: booking
+              paths, mobile-first, live on altydlekker.co.za.
             </p>
             <p className="mt-4 inline-flex items-center gap-2 text-[13px] sm:text-[14px] font-medium text-[#1E7FEB]">
               <LinkIcon />

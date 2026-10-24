@@ -6,7 +6,7 @@ animated WebGPU/WebGL hero background from the `shaders` package.
 
 ## Sections
 
-Hero, About, Services, Process, Pricing, Demos, Why work with me, FAQ, Contact, Footer
+Hero, About, Services, Process, Pricing, Work, Why work with me, FAQ, Contact, Footer
 
 ## Run it locally
 
@@ -32,7 +32,7 @@ The build is a static site in `dist/`. Drop it on any static host:
 | What | Where |
 | --- | --- |
 | Contact details (email, WhatsApp, LinkedIn) | `src/site.ts` |
-| Portfolio projects (Narrativ / Luminar) | `src/components/Portfolio.tsx`: replace video URLs, titles, descriptions |
+| Portfolio projects (Altyd Lekker, Narrativ, Luminar) | `src/components/Portfolio.tsx`: live client link, demo videos, titles, descriptions |
 | About images | `src/components/About.tsx` (`SMALL_IMG` / `LARGE_IMG`) |
 | Services & benefits copy | `src/components/Services.tsx`, `src/components/WhyChooseMe.tsx` |
 | Headline / hero copy | `src/components/Hero.tsx` |

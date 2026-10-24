@@ -6,7 +6,7 @@ import HeroDashboard from "./graphics/HeroDashboard";
 const NAV_LINKS = [
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Demos", href: "#portfolio" },
+  { label: "Work", href: "#portfolio" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -15,7 +15,7 @@ const MENU_LINKS = [
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Demos", href: "#portfolio" },
+  { label: "Work", href: "#portfolio" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
@@ -261,7 +261,7 @@ export default function Hero() {
                 className="group flex items-center gap-1.5 text-[13px] sm:text-[14px] text-gray-900 font-medium"
               >
                 <span className="group-hover:underline underline-offset-4">
-                  View demos
+                  View work
                 </span>
                 <ArrowRight
                   size={14}

@@ -4,6 +4,7 @@ import { Shader, Swirl, ChromaFlow, FlutedGlass, FilmGrain } from "shaders/react
 import HeroDashboard from "./graphics/HeroDashboard";
 
 const NAV_LINKS = [
+  { label: "Free site check", href: "#site-check" },
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#pricing" },
   { label: "Work", href: "#portfolio" },
@@ -11,6 +12,7 @@ const NAV_LINKS = [
 ];
 
 const MENU_LINKS = [
+  { label: "Free 1-minute site check", href: "#site-check" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
@@ -254,6 +256,13 @@ export default function Hero() {
                     className={`text-[#1E7FEB] transition-transform duration-500 ${EASE} group-hover:-rotate-45`}
                   />
                 </span>
+              </a>
+
+              <a
+                href="#site-check"
+                className="flex items-center min-h-[48px] bg-white border-2 border-[#1E7FEB] text-[#1E7FEB] text-[15px] font-medium rounded-full px-5 hover:bg-[#EAF3FE] transition-colors"
+              >
+                Free 1-minute site check
               </a>
 
               <a

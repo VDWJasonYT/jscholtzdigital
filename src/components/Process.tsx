@@ -63,12 +63,12 @@ export default function Process() {
           </ol>
         </div>
         <div className="mt-14 sm:mt-16 rounded-2xl bg-[#F5F5F5] p-6 sm:p-8 max-w-4xl">
-          <h3 className="text-[18px] sm:text-[20px] font-semibold text-gray-900">How we work: remote-first</h3>
+          <h3 className="text-[18px] sm:text-[20px] font-semibold text-gray-900">How I work: remote-first</h3>
           <ul className="mt-4 grid sm:grid-cols-2 gap-3 text-[14px] sm:text-[15px] leading-relaxed text-gray-700 list-disc pl-5">
-            <li>Enquiries are handled online, by WhatsApp, email or the form below.</li>
+            <li>I handle enquiries online, by WhatsApp, email or the form below.</li>
             <li>Discovery calls take 20 to 30 minutes.</li>
-            <li>Proposals and quotes are sent digitally.</li>
-            <li>We meet in person only when there is a good business reason.</li>
+            <li>I send proposals and quotes digitally.</li>
+            <li>I meet in person only when there is a good business reason.</li>
           </ul>
         </div>
       </div>

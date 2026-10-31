@@ -15,11 +15,6 @@ const PLANS: Plan[] = [
     desc: "A focused page for your business, with a way for customers to enquire.",
   },
   {
-    title: "Google Business listing setup",
-    price: "R1,200",
-    desc: "Your Google listing set up so people can find you on Search and Maps.",
-  },
-  {
     title: "Custom apps and security work",
     price: "Quoted per project",
     desc: "Apps and security work, scoped to the outcome you actually need.",
@@ -39,7 +34,7 @@ export default function Pricing() {
           <br />
           in rand.
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
           {PLANS.map((plan) => (
             <div
               key={plan.title}

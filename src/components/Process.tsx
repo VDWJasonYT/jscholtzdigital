@@ -47,23 +47,6 @@ export default function Process() {
         </h2>
 
         <div className="relative">
-          <svg
-            className="pointer-events-none absolute left-[10%] right-[10%] top-[104px] hidden h-[2px] w-auto lg:block"
-            viewBox="0 0 100 2"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <line
-              x1="0"
-              y1="1"
-              x2="100"
-              y2="1"
-              stroke="#1E7FEB"
-              strokeWidth="1"
-              vectorEffect="non-scaling-stroke"
-            />
-          </svg>
 
           <ol className="relative z-10 grid grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-10 list-none p-0 m-0">
             {STEPS.map((item) => (
@@ -78,6 +61,15 @@ export default function Process() {
               </li>
             ))}
           </ol>
+        </div>
+        <div className="mt-14 sm:mt-16 rounded-2xl bg-[#F5F5F5] p-6 sm:p-8 max-w-4xl">
+          <h3 className="text-[18px] sm:text-[20px] font-semibold text-gray-900">How we work: remote-first</h3>
+          <ul className="mt-4 grid sm:grid-cols-2 gap-3 text-[14px] sm:text-[15px] leading-relaxed text-gray-700 list-disc pl-5">
+            <li>Enquiries are handled online, by WhatsApp, email or the form below.</li>
+            <li>Discovery calls take 20 to 30 minutes.</li>
+            <li>Proposals and quotes are sent digitally.</li>
+            <li>We meet in person only when there is a good business reason.</li>
+          </ul>
         </div>
       </div>
     </section>

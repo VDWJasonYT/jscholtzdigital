@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Clock, MapPin, Menu, X } from "lucide-react";
-import { Shader, Swirl, ChromaFlow, FlutedGlass, FilmGrain } from "shaders/react";
+import { Shader, Swirl, ChromaFlow, FilmGrain } from "shaders/react";
 import HeroDashboard from "./graphics/HeroDashboard";
 
 const NAV_LINKS = [
@@ -106,18 +106,6 @@ export default function Hero() {
               upColor="#1E7FEB"
               momentum={13}
               radius={3.5}
-            />
-            <FlutedGlass
-              aberration={0.61}
-              angle={31}
-              frequency={8}
-              highlight={0.12}
-              highlightSoftness={0}
-              lightAngle={-90}
-              refraction={4}
-              shape="rounded"
-              softness={1}
-              speed={0.15}
             />
             <FilmGrain strength={0.05} />
           </Shader>

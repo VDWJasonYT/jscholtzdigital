@@ -264,10 +264,12 @@ section[id],#join,#vip,#host,#schedule,#faq{scroll-margin-top:5.5rem}
 .hero-cta{display:flex;flex-direction:column;gap:.75rem;max-width:22rem}
 .hero-meta{color:var(--muted);font-size:.82rem;margin-top:.35rem}
 .hero-media{
-  border-radius:14px;overflow:hidden;border:1px solid var(--line);
-  background:#050505;aspect-ratio:9/16;max-width:360px;margin-inline:auto;
+  border-radius:14px;overflow:hidden;
+  border:1px solid rgba(208,254,22,.38);
+  box-shadow:0 0 0 1px rgba(208,254,22,.08), 0 18px 40px rgba(0,0,0,.45);
+  background:#050505;aspect-ratio:9/16;max-width:360px;width:min(360px,88vw);margin-inline:auto;
 }
-.hero-media video{width:100%;height:100%;object-fit:cover}
+.hero-media video{width:100%;height:100%;object-fit:cover;display:block}
 
 /* strip under hero */
 .strip{
@@ -576,7 +578,7 @@ img,video{height:auto}
   .hero-cta{max-width:none;width:100%}
   .hero-cta .btn{width:100%}
   .hero-meta{font-size:.88rem;line-height:1.5}
-  .hero-media{max-width:100%;aspect-ratio:9/16}
+  .hero-media{max-width:min(360px,88vw);width:min(360px,88vw);aspect-ratio:9/16}
   .section-title{font-size:clamp(2.1rem, 9vw, 3rem);line-height:1}
   .section-lead{font-size:1rem;line-height:1.6;margin-bottom:1.5rem}
   .top-inner{padding:.7rem 0;gap:.75rem}
@@ -682,8 +684,8 @@ img,video{height:auto}
         </div>
       </div>
       <div class="hero-media">
-        <video controls playsinline preload="metadata" poster="assets/logo.webp" aria-label="Van Der Wolf AI Income Challenge teaser">
-          <source src="assets/teaser_web.mp4" type="video/mp4"/>
+        <video controls playsinline preload="metadata" poster="assets/promo_poster.jpg" aria-label="Van Der Wolf AI Income Challenge promo">
+          <source src="assets/promo_web.mp4" type="video/mp4"/>
         </video>
       </div>
     </div>

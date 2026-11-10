@@ -1,9 +1,5 @@
 import { ArrowRight } from "lucide-react";
 import { BadgeRow } from "./ui";
-import LazyVideo from "./LazyVideo";
-
-const VIDEO_1 = "/media/demo-narrativ.mp4";
-const VIDEO_2 = "/media/demo-luminar.mp4";
 
 const ALTYD_LEKKER_URL = "https://altydlekker.co.za";
 const MODERN_DENTAL_URL = "https://moderndental.co.za/";
@@ -42,9 +38,7 @@ export default function Portfolio() {
           className="font-medium leading-[1.08] tracking-[-0.03em] text-gray-900 mb-10 sm:mb-14 lg:mb-16"
           style={{ fontSize: "clamp(1.75rem, 4vw, 3.4rem)" }}
         >
-          Live client sites,
-          <br />
-          plus concept demos.
+          Live client sites.
         </h2>
 
         <a
@@ -147,88 +141,6 @@ export default function Portfolio() {
           </div>
         </a>
 
-        <div className="mt-16 sm:mt-20 lg:mt-24">
-          <h3
-            className="font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-6 sm:mb-8"
-            style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}
-          >
-            Demo projects
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-7">
-            {/* Narrativ demo */}
-            <div>
-              <div className="group relative aspect-[329/246] rounded-2xl overflow-hidden bg-[#1a1d2e]">
-                <LazyVideo
-                  src={VIDEO_1}
-                  poster="/media/demo-narrativ-poster.webp"
-                  label="Narrativ demo project: animated 3D showcase page"
-                  className="w-full h-full object-cover"
-                />
-                <span className="absolute top-4 left-4 bg-white text-gray-900 text-[11px] font-semibold uppercase tracking-wide rounded-full px-3 py-1">
-                  Demo project
-                </span>
-                <div className="absolute bottom-4 left-4 h-9 w-9 group-hover:w-[148px] bg-white rounded-full flex items-center overflow-hidden transition-all duration-300 ease-in-out">
-                  <span className="h-9 w-9 shrink-0 flex items-center justify-center">
-                    <LinkIcon className="text-gray-900 -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
-                  </span>
-                  <span className="text-[13px] font-medium text-gray-900 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 pr-4">
-                    Learn more
-                  </span>
-                </div>
-              </div>
-              <p className="text-[12px] text-gray-600 mt-4">
-                Demo project. Not a client site.
-              </p>
-              <p className="text-[13px] sm:text-[14px] text-gray-600 mt-1 leading-relaxed">
-                A concept build showing an interactive, animated showcase page.
-              </p>
-              <h4 className="text-[14px] sm:text-[15px] font-semibold text-gray-900 mt-1">
-                Narrativ
-              </h4>
-            </div>
-
-            {/* Luminar demo */}
-            <div>
-              <div className="group relative aspect-square rounded-2xl overflow-hidden bg-[#6b6b6b]">
-                <LazyVideo
-                  src={VIDEO_2}
-                  poster="/media/demo-luminar-poster.webp"
-                  label="Luminar demo project: brand landing page"
-                  className="w-full h-full object-cover"
-                />
-                <span className="absolute top-4 left-4 bg-white text-gray-900 text-[11px] font-semibold uppercase tracking-wide rounded-full px-3 py-1">
-                  Demo project
-                </span>
-                <div className="absolute bottom-4 left-4 h-9 w-9 group-hover:w-[150px] bg-[#1E7FEB] rounded-full flex items-center overflow-hidden transition-all duration-300 ease-in-out">
-                  <span className="h-9 w-9 shrink-0 flex items-center justify-center">
-                    <ArrowRight
-                      size={14}
-                      className="text-white -rotate-45 group-hover:rotate-0 transition-transform duration-300"
-                    />
-                  </span>
-                  <span className="text-[13px] font-medium text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 pr-4">
-                    Demo project
-                  </span>
-                </div>
-              </div>
-              <p className="text-[12px] text-gray-600 mt-4">
-                Demo project. Not a client site.
-              </p>
-              <p className="text-[13px] sm:text-[14px] text-gray-600 mt-1 leading-relaxed">
-                A concept build showing a clean, fast brand landing page.
-              </p>
-              <h4 className="text-[14px] sm:text-[15px] font-semibold text-gray-900 mt-1">
-                Luminar
-              </h4>
-            </div>
-          </div>
-
-          <p className="mt-8 text-[13px] text-gray-600">
-            Narrativ and Luminar are demo projects that show style and skills.
-            They are not paid client work.
-          </p>
-        </div>
       </div>
     </section>
   );

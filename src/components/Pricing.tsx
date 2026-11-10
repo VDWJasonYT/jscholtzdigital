@@ -32,7 +32,7 @@ const ZAR_ROWS: Row[] = [
     desc: "I plan and run ads for your business, with a clear scope before I start.",
   },
   {
-    title: "Website security checks",
+    title: "Website security check",
     price: "R2,500",
     desc: "A passive outside review of your site, written up in plain English.",
   },
@@ -43,7 +43,7 @@ const ZAR_ROWS: Row[] = [
   },
   {
     title: "Maintenance",
-    price: "R700",
+    price: "R700/mo",
     desc: "Updates and fixes after launch, agreed before I start.",
   },
   {

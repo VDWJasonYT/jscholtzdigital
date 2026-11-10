@@ -23,7 +23,7 @@ export default function Footer() {
               <span className="text-[16px] font-semibold">JScholtz Digital</span>
             </div>
             <p className="mt-4 text-[14px] text-gray-300 max-w-xs">
-              Secure websites, apps and security checks
+              Websites, ad management, website security checks and Google Business Profile setup for small businesses worldwide. Remote-first, based in Secunda, South Africa.
             </p>
           </div>
 

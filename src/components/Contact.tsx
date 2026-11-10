@@ -243,7 +243,7 @@ export default function Contact() {
                       onChange={(e) => set("town", e.target.value)}
                       className={inputClass}
                       autoComplete="address-level2"
-                      placeholder="Secunda"
+                      placeholder="Your town or city"
                     />
                   </Field>
                   <Field label="What does the business do?" id="business-about">

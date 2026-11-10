@@ -28,8 +28,9 @@ export default function About() {
         <div className="lg:hidden px-5 sm:px-8">
           <p className="text-[15px] leading-[1.6] font-medium text-gray-900">
             I'm Jason Scholtz, Founder &amp; CEO of JScholtz Digital. I started the
-            business in June 2026 in Secunda, Mpumalanga, and I work with South African small businesses to design, build and maintain
-            websites that look sharp, load fast and stay secure.
+            business in June 2026 in Secunda, South Africa, and I work remote-first
+            with small businesses worldwide. I design, build and maintain websites,
+            and I also offer ad management, website security checks and Google Business Profile setup.
           </p>
           <div className="mt-6">
             <BlueButton text="See prices" href="#pricing" />
@@ -68,13 +69,13 @@ export default function About() {
                 <br />
                 JScholtz Digital. Founded in June 2026 in
                 <br />
-                Secunda, Mpumalanga. I work with
+                Secunda, South Africa. I work remote-first
                 <br />
-                South African small businesses to design, build
+                with small businesses worldwide, on
                 <br />
-                and maintain websites that look sharp,
+                websites, ad management, security checks
                 <br />
-                load fast and stay secure.
+                and Google Business Profile setup.
               </p>
               <div className="mt-8">
                 <BlueButton text="See prices" href="#pricing" />

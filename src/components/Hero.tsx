@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Clock, MapPin, Menu, X } from "lucide-react";
-import { Shader, Swirl, ChromaFlow, FilmGrain } from "shaders/react";
 import HeroDashboard from "./graphics/HeroDashboard";
+import HeroBackdrop from "./HeroBackdrop";
+import TypeLine from "./TypeLine";
 
 const NAV_LINKS = [
   { label: "Free site check", href: "#site-check" },
@@ -45,7 +46,7 @@ function useLocalTime() {
 /** Logo: dark circle with white "JS". */
 function LogoMark() {
   return (
-    <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-900 rounded-full flex items-center justify-center shrink-0">
+    <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-900 rounded-full neon-ring flex items-center justify-center shrink-0">
       <span className="text-white text-[10px] sm:text-[11px] font-bold tracking-tight">
         JS
       </span>
@@ -67,50 +68,13 @@ function TextRoll({ text }: { text: string }) {
   );
 }
 
-/** Fallback gradient shown if the GPU can't run the shader stack. */
-function ShaderFallback() {
-  return (
-    <div
-      className="absolute inset-0"
-      style={{
-        background:
-          "radial-gradient(120% 120% at 80% 0%, rgba(30,127,235,0.10), transparent 55%), radial-gradient(120% 120% at 0% 100%, rgba(77,163,255,0.10), transparent 55%), #EFEFEF",
-      }}
-    />
-  );
-}
-
 export default function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [gpuFailed, setGpuFailed] = useState(false);
   const time = useLocalTime();
 
   return (
     <section className="relative w-full bg-[#EFEFEF] overflow-hidden lg:min-h-screen lg:flex lg:flex-col">
-      {/* Animated shader overlay */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
-        {gpuFailed ? (
-          <ShaderFallback />
-        ) : (
-          <Shader
-            className="w-full h-full"
-            style={{ width: "100%", height: "100%" }}
-            onUnavailable={() => setGpuFailed(true)}
-          >
-            <Swirl colorA="#ffffff" colorB="#f0f0f0" detail={1.7} />
-            <ChromaFlow
-              baseColor="#ffffff"
-              downColor="#1E7FEB"
-              leftColor="#1E7FEB"
-              rightColor="#1E7FEB"
-              upColor="#1E7FEB"
-              momentum={13}
-              radius={3.5}
-            />
-            <FilmGrain strength={0.05} />
-          </Shader>
-        )}
-      </div>
+      <HeroBackdrop />
 
       {/* Navigation */}
       <div className="relative z-20 mx-auto w-full max-w-[1440px] p-2 sm:p-3">
@@ -217,16 +181,16 @@ export default function Hero() {
       <div className="relative z-20 mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 pt-8 sm:pt-10 pb-14 sm:pb-16 lg:pt-4 lg:pb-16 lg:flex-1 lg:flex lg:items-center">
         <div className="grid w-full items-center gap-8 lg:grid-cols-2 lg:gap-6">
           <div>
-            <p className="text-[13px] sm:text-[14px] text-gray-900 tracking-wide mb-4 sm:mb-6">
+            <p className="font-mono text-[13px] sm:text-[14px] text-gray-900 tracking-wide mb-4 sm:mb-6">
               JScholtz Digital
             </p>
 
-            <h1
-              className="font-medium leading-[0.98] tracking-[-0.03em] text-gray-900"
+            <TypeLine
+              as="h1"
+              text="Secure. Simple. Remote-first."
+              className="font-medium leading-[0.98] tracking-[-0.03em] text-gray-900 min-h-[1.2em]"
               style={{ fontSize: "clamp(2.7rem, 10vw, 4.8rem)" }}
-            >
-              Secure. Simple. Remote-first.
-            </h1>
+            />
 
             <p className="mt-4 text-[15px] sm:text-[18px] leading-snug text-gray-800">
               I work with small businesses worldwide.

@@ -2,6 +2,7 @@ import { Megaphone, Monitor, Shield, Smartphone, Store, Wrench } from "lucide-re
 import type { LucideIcon } from "lucide-react";
 import { BadgeRow } from "./ui";
 import ServicesStack from "./graphics/ServicesStack";
+import Reveal from "./Reveal";
 
 type Service = {
   icon: LucideIcon;
@@ -65,9 +66,9 @@ export default function Services() {
           </div>
           <div className="order-2 lg:order-1 grid sm:grid-cols-2 gap-4">
             {SERVICES.map(({ icon: Icon, title, desc }) => (
+              <Reveal key={title}>
               <div
-                key={title}
-                className="group bg-white rounded-2xl p-6 transition-colors duration-300 hover:bg-gray-900"
+                className="group grad-card rounded-2xl p-6 transition-colors duration-300 hover:bg-gray-900"
               >
                 <div className="w-11 h-11 rounded-xl bg-[#F5F5F5] flex items-center justify-center mb-5 group-hover:bg-white">
                   <Icon size={20} className="text-[#1E7FEB]" />
@@ -79,6 +80,7 @@ export default function Services() {
                   {desc}
                 </p>
               </div>
+              </Reveal>
             ))}
           </div>
         </div>

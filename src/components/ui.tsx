@@ -15,7 +15,7 @@ export function BadgeRow({
 }) {
   return (
     <div className={`flex items-center gap-3 mb-6 sm:mb-8 ${className}`}>
-      <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gray-900 text-white text-[11px] sm:text-[12px] font-semibold flex items-center justify-center">
+      <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gray-900 text-white text-[11px] sm:text-[12px] font-semibold font-mono flex items-center justify-center neon-ring">
         {number}
       </span>
       <span

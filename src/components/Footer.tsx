@@ -1,4 +1,5 @@
 import { EMAIL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "../site";
+import SectionTexture from "./SectionTexture";
 
 const LINKS = [
   { label: "About", href: "#about" },
@@ -12,12 +13,17 @@ const LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 pt-12 pb-8">
+    <footer className="relative overflow-hidden bg-gray-900 text-white">
+      <SectionTexture
+        src="/media/cta-flow.webp"
+        alt="Abstract navy and blue data-flow pattern"
+        className="opacity-25"
+      />
+      <div className="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 pt-12 pb-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-gray-900 ring-1 ring-white/15 rounded-full flex items-center justify-center">
+              <div className="w-9 h-9 bg-gray-900 neon-ring rounded-full flex items-center justify-center">
                 <span className="text-white text-[11px] font-bold tracking-tight">JS</span>
               </div>
               <span className="text-[16px] font-semibold">JScholtz Digital</span>

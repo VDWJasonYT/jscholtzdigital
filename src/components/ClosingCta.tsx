@@ -1,10 +1,18 @@
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_QUOTE_URL } from "../site";
+import SectionTexture from "./SectionTexture";
+import Reveal from "./Reveal";
 
 export default function ClosingCta() {
   return (
-    <section className="bg-[#EFEFEF] pt-16 sm:pt-20 lg:pt-28 pb-16 sm:pb-20 lg:pb-24">
-      <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
+    <section className="relative overflow-hidden bg-[#EFEFEF] pt-16 sm:pt-20 lg:pt-28 pb-16 sm:pb-20 lg:pb-24">
+      <SectionTexture
+        src="/media/cta-flow.webp"
+        alt="Abstract navy and blue data-flow pattern"
+        className="opacity-[0.12]"
+      />
+      <div className="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
+        <Reveal>
         <h2
           className="font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 max-w-4xl"
           style={{ fontSize: "clamp(1.75rem, 4.4vw, 3.6rem)" }}
@@ -20,6 +28,7 @@ export default function ClosingCta() {
           <MessageCircle size={18} aria-hidden="true" />
           Prefer a quick conversation? Chat on WhatsApp
         </a>
+        </Reveal>
       </div>
     </section>
   );

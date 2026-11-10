@@ -18,18 +18,19 @@ export default function About() {
             className="font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-12 sm:mb-16 lg:mb-28"
             style={{ fontSize: "clamp(1.5rem, 4vw, 3.2rem)" }}
           >
-            A one-person studio,
+            A founder-led studio,
             <br />
-            obsessed with results.
+            based in Secunda.
           </h2>
         </div>
 
         {/* Mobile / tablet */}
         <div className="lg:hidden px-5 sm:px-8">
           <p className="text-[15px] leading-[1.6] font-medium text-gray-900">
-            I'm Jason Scholtz, the developer behind JScholtz Digital. Based in
-            Secunda, I work with South African small businesses to design, build and maintain
-            websites that look sharp, load fast and stay secure.
+            I'm Jason Scholtz, Founder &amp; CEO of JScholtz Digital. I started the
+            business in June 2026 in Secunda, South Africa, and I work remote-first
+            with small businesses worldwide. I design, build and maintain websites,
+            and I also offer ad management, website security checks and Google Business Profile setup.
           </p>
           <div className="mt-6">
             <BlueButton text="See prices" href="#pricing" />
@@ -64,15 +65,17 @@ export default function About() {
           <div className="self-start flex justify-end">
             <div>
               <p className="text-[16px] leading-[1.65] font-medium text-gray-900 whitespace-nowrap">
-                I'm Jason Scholtz, the developer behind
+                I'm Jason Scholtz, Founder &amp; CEO of
                 <br />
-                JScholtz Digital. Based in Secunda, I work with
+                JScholtz Digital. Founded in June 2026 in
                 <br />
-                South African small businesses to design, build
+                Secunda, South Africa. I work remote-first
                 <br />
-                and maintain websites that look sharp,
+                with small businesses worldwide, on
                 <br />
-                load fast and stay secure.
+                websites, ad management, security checks
+                <br />
+                and Google Business Profile setup.
               </p>
               <div className="mt-8">
                 <BlueButton text="See prices" href="#pricing" />

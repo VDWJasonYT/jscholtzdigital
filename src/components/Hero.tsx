@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Clock, MapPin, Menu, X } from "lucide-react";
-import { Shader, Swirl, ChromaFlow, FlutedGlass, FilmGrain } from "shaders/react";
+import { Shader, Swirl, ChromaFlow, FilmGrain } from "shaders/react";
 import HeroDashboard from "./graphics/HeroDashboard";
 
 const NAV_LINKS = [
@@ -106,18 +106,6 @@ export default function Hero() {
               upColor="#1E7FEB"
               momentum={13}
               radius={3.5}
-            />
-            <FlutedGlass
-              aberration={0.61}
-              angle={31}
-              frequency={8}
-              highlight={0.12}
-              highlightSoftness={0}
-              lightAngle={-90}
-              refraction={4}
-              shape="rounded"
-              softness={1}
-              speed={0.15}
             />
             <FilmGrain strength={0.05} />
           </Shader>
@@ -237,11 +225,11 @@ export default function Hero() {
               className="font-medium leading-[0.98] tracking-[-0.03em] text-gray-900"
               style={{ fontSize: "clamp(2.7rem, 10vw, 4.8rem)" }}
             >
-              Secure. Simple. Local.
+              Secure. Simple. Remote-first.
             </h1>
 
             <p className="mt-4 text-[15px] sm:text-[18px] leading-snug text-gray-800">
-              For small businesses in Secunda, Mpumalanga.
+              I work with small businesses worldwide.
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
@@ -281,7 +269,7 @@ export default function Hero() {
               <div className="flex items-center gap-2 bg-white rounded-[4px] px-3 py-2 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
                 <MapPin size={16} className="text-[#1E7FEB]" aria-hidden="true" />
                 <span className="text-[13px] sm:text-[14px] font-medium text-gray-900">
-                  Based in Secunda, Mpumalanga
+                  Based in Secunda, South Africa
                 </span>
               </div>
             </div>

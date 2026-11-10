@@ -60,7 +60,7 @@ export default function SiteCheck() {
           <form onSubmit={submit} noValidate className="mt-8 flex flex-col gap-5 rounded-2xl bg-[#F5F5F5] p-5 sm:p-7">
             <label className="flex flex-col gap-2 text-[15px] font-medium text-gray-900">
               Business name
-              <input className={inputClass} value={business} onChange={(e) => setBusiness(e.target.value)} autoComplete="organization" placeholder="e.g. Secunda Auto Repairs" />
+              <input className={inputClass} value={business} onChange={(e) => setBusiness(e.target.value)} autoComplete="organization" placeholder="e.g. your business name" />
             </label>
             <label className="flex flex-col gap-2 text-[15px] font-medium text-gray-900">
               Website address <span className="font-normal text-gray-600">(optional)</span>

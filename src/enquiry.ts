@@ -5,6 +5,7 @@ export const SERVICE_OPTIONS = [
   "Google listing",
   "App",
   "Security check",
+  "Ad management",
 ] as const;
 
 export type ServiceOption = (typeof SERVICE_OPTIONS)[number];

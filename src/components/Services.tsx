@@ -1,4 +1,4 @@
-import { Monitor, Shield, Smartphone, Wrench } from "lucide-react";
+import { Megaphone, Monitor, Shield, Smartphone, Store, Wrench } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { BadgeRow } from "./ui";
 import ServicesStack from "./graphics/ServicesStack";
@@ -30,6 +30,16 @@ const SERVICES: Service[] = [
     title: "Maintenance",
     desc: "Updates and fixes after launch, agreed before I start.",
   },
+  {
+    icon: Megaphone,
+    title: "Ad management",
+    desc: "I plan and run ads for your business, with a clear scope before I start.",
+  },
+  {
+    icon: Store,
+    title: "Google Business Profile setup",
+    desc: "Your Google Business Profile set up so people can find you on Search and Maps.",
+  },
 ];
 
 export default function Services() {
@@ -41,12 +51,12 @@ export default function Services() {
           className="font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-4"
           style={{ fontSize: "clamp(1.5rem, 4vw, 3.2rem)" }}
         >
-          Websites, apps and
+          Websites, ads, security
           <br />
-          security checks.
+          and Google Business setup.
         </h2>
         <p className="text-[15px] sm:text-[16px] text-gray-600 max-w-xl mb-10 sm:mb-14">
-          You deal directly with me, from the first conversation through to launch.
+          I work with small businesses worldwide, remote-first. You deal directly with me, from the first conversation through to launch.
         </p>
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">

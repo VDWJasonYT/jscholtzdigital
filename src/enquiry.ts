@@ -1,11 +1,11 @@
 import { WHATSAPP_E164 } from "./site";
 
 export const SERVICE_OPTIONS = [
+  "Meta ads + AI video",
   "Website",
-  "Google listing",
-  "App",
   "Security check",
-  "Ad management",
+  "Google Business Profile",
+  "Full package",
 ] as const;
 
 export type ServiceOption = (typeof SERVICE_OPTIONS)[number];
@@ -43,7 +43,7 @@ export const EMPTY_ENQUIRY: Enquiry = {
 
 export function enquiryBody(enquiry: Enquiry): string {
   const lines = [
-    "Hi Jason,",
+    "Hi JScholtz Digital,",
     "",
     `Service: ${enquiry.service}`,
     `Business: ${enquiry.business}`,

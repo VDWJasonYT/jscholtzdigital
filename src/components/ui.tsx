@@ -38,7 +38,7 @@ export function BlueButton({
   return (
     <a
       href={href}
-      className="group inline-flex items-center gap-2 bg-[#1E7FEB] hover:bg-[#1663C4] text-white text-[13px] sm:text-[14px] rounded-full pl-5 sm:pl-6 pr-2 py-2 transition-colors duration-300"
+      className="group inline-flex items-center gap-2 bg-[#1A6FD0] hover:bg-[#155BB0] text-white text-[13px] sm:text-[14px] rounded-full pl-5 sm:pl-6 pr-2 py-2 transition-colors duration-300"
     >
       <span className="flex flex-col overflow-hidden h-[20px] leading-[20px]">
         <span
@@ -51,7 +51,7 @@ export function BlueButton({
       <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center">
         <ArrowRight
           size={16}
-          className={`text-[#1E7FEB] transition-transform duration-500 ${EASE} group-hover:-rotate-45`}
+          className={`text-[#1A6FD0] transition-transform duration-500 ${EASE} group-hover:-rotate-45`}
         />
       </span>
     </a>

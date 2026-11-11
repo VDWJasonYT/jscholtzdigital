@@ -2,11 +2,10 @@ import { EMAIL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "../site";
 import SectionTexture from "./SectionTexture";
 
 const LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
+    { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Work", href: "#portfolio" },
+  { label: "Packages", href: "#packages" },
+  { label: "Case study", href: "#portfolio" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
@@ -29,7 +28,7 @@ export default function Footer() {
               <span className="text-[16px] font-semibold">JScholtz Digital</span>
             </div>
             <p className="mt-4 text-[14px] text-gray-300 max-w-xs">
-              Websites, ad management, website security checks and Google Business Profile setup for small businesses worldwide. Remote-first, based in Secunda, South Africa.
+              AI-powered digital marketing agency: Meta ads with AI video creatives, websites, website security checks and Google Business Profile setup. Based in Secunda, South Africa.
             </p>
           </div>
 
@@ -63,7 +62,7 @@ export default function Footer() {
         <div className="mt-10 text-[12px] text-gray-500 max-w-xl">
           <p>© 2026 JScholtz Digital. Secunda, Mpumalanga, South Africa. Not VAT registered.</p>
           <p className="mt-2">
-            I only use the details you send to reply to your enquiry, and I do not sell or share
+            We only use the details you send to reply to your enquiry, and we do not sell or share
             them, in line with POPIA.
           </p>
         </div>

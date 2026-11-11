@@ -5,5 +5,5 @@ export const WHATSAPP_DISPLAY = "+27 61 599 0085";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_E164}`;
 export const LINKEDIN_URL = "https://www.linkedin.com/company/jscholtz-digital/";
 
-export const WHATSAPP_QUOTE_TEXT = "Hi Jason, I'd like a website quote.";
+export const WHATSAPP_QUOTE_TEXT = "Hi JScholtz Digital, I'd like to talk about your marketing packages.";
 export const WHATSAPP_QUOTE_URL = `${WHATSAPP_URL}?text=${encodeURIComponent(WHATSAPP_QUOTE_TEXT)}`;

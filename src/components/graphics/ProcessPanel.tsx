@@ -29,7 +29,7 @@ export default function ProcessPanel({
           height="186"
           rx="26"
           fill="#121826"
-          stroke="#1E7FEB"
+          stroke="#1A6FD0"
           strokeWidth="1"
           vectorEffect="non-scaling-stroke"
         />
@@ -78,7 +78,7 @@ function Icon({ icon }: { icon: ProcessIcon }) {
         <circle cx="12" cy="11" r="1.6" fill="#4DA3FF" />
         <circle cx="20" cy="11" r="1.6" fill="#4DA3FF" />
         <circle cx="28" cy="11" r="1.6" fill="#4DA3FF" />
-        <rect x="12" y="28" width="32" height="6" rx="3" fill="#1E7FEB" />
+        <rect x="12" y="28" width="32" height="6" rx="3" fill="#1A6FD0" />
         <rect x="12" y="40" width="44" height="6" rx="3" fill="#2A3548" />
       </g>
     );

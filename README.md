@@ -41,7 +41,7 @@ The build is a static site in `dist/`. Drop it on any static host:
 
 Single electric-blue accent from the logo: no orange anywhere.
 
-- Primary blue `#1E7FEB` · hover `#1663C4`
+- Primary blue `#1A6FD0` · hover `#155BB0`
 - Highlight `#4DA3FF` · deep `#0B4F9E`
 - Surfaces: `#EFEFEF` (hero), `#FFFFFF` (about), `#F5F5F5` (portfolio/testimonials)
 - Ink: `gray-900`

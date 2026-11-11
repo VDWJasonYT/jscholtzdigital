@@ -39,10 +39,10 @@ const METHODS: Method[] = [
   },
 ];
 
-const STEP_TITLES = ["", "What do you need?", "Your business", "The project", "How I reach you"];
+const STEP_TITLES = ["", "What do you need?", "Your business", "The project", "How we reach you"];
 
 const inputClass =
-  "w-full rounded-xl border border-gray-200 px-4 py-3 text-[14px] outline-none focus:border-[#1E7FEB] transition-colors";
+  "w-full rounded-xl border border-gray-200 px-4 py-3 text-[14px] outline-none focus:border-[#1A6FD0] transition-colors";
 
 export default function Contact() {
   const [step, setStep] = useState(1);
@@ -69,12 +69,12 @@ export default function Contact() {
     if (current === 2 && (!enquiry.business.trim() || !enquiry.town.trim() || !enquiry.about.trim())) {
       return "Add your business name, town and what you do.";
     }
-    if (current === 3 && !enquiry.details.trim()) return "Tell me a little about the project.";
+    if (current === 3 && !enquiry.details.trim()) return "Tell us a little about the project.";
     if (current === 4) {
       if (!enquiry.name.trim() || !enquiry.email.trim() || !enquiry.consent) {
-        return "Add your name, email and consent so I can reply.";
+        return "Add your name, email and consent so we can reply.";
       }
-      if (!isEmail(enquiry.email)) return "Enter an email address I can reply to.";
+      if (!isEmail(enquiry.email)) return "Enter an email address we can reply to.";
     }
     return "";
   };
@@ -110,7 +110,7 @@ export default function Contact() {
       <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
         <div className="flex items-center gap-3 mb-6 sm:mb-8">
           <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white text-gray-900 text-[11px] sm:text-[12px] font-semibold flex items-center justify-center">
-            8
+            7
           </span>
           <span className="text-[12px] sm:text-[13px] font-medium border border-white/20 text-white rounded-full px-3 sm:px-4 py-1 sm:py-1.5">
             Get in touch
@@ -121,11 +121,11 @@ export default function Contact() {
           className="font-medium leading-[1.08] tracking-[-0.03em] text-white mb-6"
           style={{ fontSize: "clamp(2.25rem, 5vw, 4.2rem)" }}
         >
-          Tell me what you need.
+          Tell us what you need.
         </h2>
 
         <p className="text-[15px] sm:text-[16px] text-gray-400 max-w-xl mb-10 sm:mb-14">
-          Share a few details and I will reply with a quote. Or message me directly.
+          Share a few details and we will reply with a quote. Or message us directly.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
@@ -141,7 +141,7 @@ export default function Contact() {
                   {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="group flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors duration-300"
                 >
-                  <span className="w-11 h-11 rounded-xl bg-[#1E7FEB] flex items-center justify-center shrink-0">
+                  <span className="w-11 h-11 rounded-xl bg-[#1A6FD0] flex items-center justify-center shrink-0">
                     <Icon size={20} className="text-white" />
                   </span>
                   <span className="flex flex-col min-w-0">
@@ -177,12 +177,12 @@ export default function Contact() {
                 window.location.href = enquiryMailto(EMAIL, enquiry);
               }}
             >
-              <p className="text-[13px] font-medium text-[#1E7FEB]">Step {step} of 4</p>
+              <p className="text-[13px] font-medium text-[#1A6FD0]">Step {step} of 4</p>
               <div className="mt-3 mb-6 flex gap-2" aria-hidden="true">
                 {[1, 2, 3, 4].map((n) => (
                   <span
                     key={n}
-                    className={`h-2 flex-1 rounded-full ${n <= step ? "bg-[#1E7FEB]" : "bg-gray-200"}`}
+                    className={`h-2 flex-1 rounded-full ${n <= step ? "bg-[#1A6FD0]" : "bg-gray-200"}`}
                   />
                 ))}
               </div>
@@ -229,6 +229,7 @@ export default function Contact() {
                   <Field label="Business name" id="business">
                     <input
                       id="business"
+                      maxLength={120}
                       value={enquiry.business}
                       onChange={(e) => set("business", e.target.value)}
                       className={inputClass}
@@ -239,6 +240,7 @@ export default function Contact() {
                   <Field label="Town or area" id="town">
                     <input
                       id="town"
+                      maxLength={80}
                       value={enquiry.town}
                       onChange={(e) => set("town", e.target.value)}
                       className={inputClass}
@@ -249,6 +251,7 @@ export default function Contact() {
                   <Field label="What does the business do?" id="business-about">
                     <input
                       id="business-about"
+                      maxLength={200}
                       value={enquiry.about}
                       onChange={(e) => set("about", e.target.value)}
                       className={inputClass}
@@ -263,6 +266,7 @@ export default function Contact() {
                   <Field label="What do you need?" id="details">
                     <textarea
                       id="details"
+                      maxLength={2000}
                       rows={4}
                       value={enquiry.details}
                       onChange={(e) => set("details", e.target.value)}
@@ -273,6 +277,7 @@ export default function Contact() {
                   <Field label="Current website, if you have one" id="website">
                     <input
                       id="website"
+                      maxLength={200}
                       value={enquiry.website}
                       onChange={(e) => set("website", e.target.value)}
                       className={inputClass}
@@ -283,6 +288,7 @@ export default function Contact() {
                   <Field label="When would you like to launch?" id="timing">
                     <input
                       id="timing"
+                      maxLength={80}
                       value={enquiry.timing}
                       onChange={(e) => set("timing", e.target.value)}
                       className={inputClass}
@@ -297,6 +303,7 @@ export default function Contact() {
                   <Field label="Your name" id="name">
                     <input
                       id="name"
+                      maxLength={100}
                       value={enquiry.name}
                       onChange={(e) => set("name", e.target.value)}
                       className={inputClass}
@@ -307,6 +314,7 @@ export default function Contact() {
                   <Field label="Email" id="email">
                     <input
                       id="email"
+                      maxLength={254}
                       type="email"
                       value={enquiry.email}
                       onChange={(e) => set("email", e.target.value)}
@@ -318,6 +326,7 @@ export default function Contact() {
                   <Field label="Phone, if you want a call back" id="phone">
                     <input
                       id="phone"
+                      maxLength={30}
                       type="tel"
                       value={enquiry.phone}
                       onChange={(e) => set("phone", e.target.value)}
@@ -331,7 +340,7 @@ export default function Contact() {
                       type="checkbox"
                       checked={enquiry.consent}
                       onChange={(e) => set("consent", e.target.checked)}
-                      className="mt-1 h-4 w-4 accent-[#1E7FEB]"
+                      className="mt-1 h-4 w-4 accent-[#1A6FD0]"
                     />
                     <span>
                       I agree that JScholtz Digital may use these details only to reply to this
@@ -377,7 +386,7 @@ export default function Contact() {
                 {step < 4 ? (
                   <button
                     type="submit"
-                    className="flex-1 bg-[#1E7FEB] hover:bg-[#1663C4] text-white rounded-full py-3 text-[14px] font-medium transition-colors"
+                    className="flex-1 bg-[#1A6FD0] hover:bg-[#155BB0] text-white rounded-full py-3 text-[14px] font-medium transition-colors"
                   >
                     Continue
                   </button>
@@ -396,7 +405,7 @@ export default function Contact() {
                       target={whatsapp ? "_blank" : undefined}
                       rel={whatsapp ? "noopener noreferrer" : undefined}
                       onClick={blockIfNotReady}
-                      className="flex-1 bg-[#1E7FEB] hover:bg-[#1663C4] text-white rounded-full py-3 text-[13px] sm:text-[14px] font-medium flex items-center justify-center gap-2 transition-colors"
+                      className="flex-1 bg-[#1A6FD0] hover:bg-[#155BB0] text-white rounded-full py-3 text-[13px] sm:text-[14px] font-medium flex items-center justify-center gap-2 transition-colors"
                     >
                       Send on WhatsApp
                       <MessageCircle size={15} aria-hidden="true" />
@@ -407,7 +416,7 @@ export default function Contact() {
 
               <p className="mt-4 text-[12px] leading-relaxed text-gray-500">
                 This form does not store anything. It opens your email or WhatsApp with the
-                details filled in, and you choose whether to send. I only use your details to
+                details filled in, and you choose whether to send. We only use your details to
                 reply to your enquiry, in line with POPIA.
               </p>
             </form>

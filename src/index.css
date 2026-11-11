@@ -4,7 +4,7 @@
 
 :root {
   --navy: 17 24 39;
-  --blue: 30 128 237;
+  --blue: 26 111 208;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 }
@@ -26,33 +26,33 @@ body {
 
 /* Crisp brand ring, no soft blur. */
 .neon-ring {
-  box-shadow: 0 0 0 1px rgb(30 128 237);
+  box-shadow: 0 0 0 1px rgb(26 111 208);
 }
 
 .grad-card {
   background:
     linear-gradient(#ffffff, #ffffff) padding-box,
-    linear-gradient(135deg, rgb(30 128 237), rgb(17 24 39)) border-box;
+    linear-gradient(135deg, rgb(26 111 208), rgb(17 24 39)) border-box;
   border: 1px solid transparent;
 }
 
 .grad-card-dark {
   background:
     linear-gradient(#111827, #111827) padding-box,
-    linear-gradient(135deg, rgb(30 128 237), rgb(77 163 255)) border-box;
+    linear-gradient(135deg, rgb(26 111 208), rgb(77 163 255)) border-box;
   border: 1px solid transparent;
 }
 
 .group.grad-card:hover {
   background:
     linear-gradient(#111827, #111827) padding-box,
-    linear-gradient(135deg, rgb(30 128 237), rgb(77 163 255)) border-box;
+    linear-gradient(135deg, rgb(26 111 208), rgb(77 163 255)) border-box;
 }
 
 .reveal {
   opacity: 0;
-  transform: translate3d(0, 18px, 0);
-  transition: opacity 500ms ease, transform 500ms ease;
+  transform: translate3d(0, 12px, 0);
+  transition: opacity 400ms ease, transform 400ms ease;
 }
 
 .reveal.is-visible {
@@ -60,23 +60,17 @@ body {
   transform: none;
 }
 
-.type-caret {
-  display: inline-block;
-  width: 0.08em;
-  margin-left: 0.06em;
-  background: rgb(30 128 237);
-  color: transparent;
-  animation: caret-blink 1s steps(1, end) infinite;
-}
-
-@keyframes caret-blink {
-  0%, 49% { opacity: 1; }
-  50%, 100% { opacity: 0; }
-}
 
 @media (prefers-reduced-motion: reduce) {
   html {
-    scroll-behavior: auto;
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
   }
 
   .reveal,
@@ -84,10 +78,5 @@ body {
     opacity: 1;
     transform: none;
     transition: none;
-  }
-
-  .type-caret {
-    animation: none;
-    opacity: 0;
   }
 }

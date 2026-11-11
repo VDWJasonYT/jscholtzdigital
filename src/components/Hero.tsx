@@ -1,24 +1,21 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Clock, MapPin, Menu, X } from "lucide-react";
-import HeroDashboard from "./graphics/HeroDashboard";
+import AdCreativePanel from "./graphics/AdCreativePanel";
 import HeroBackdrop from "./HeroBackdrop";
-import TypeLine from "./TypeLine";
 
 const NAV_LINKS = [
-  { label: "Free site check", href: "#site-check" },
+  { label: "Packages", href: "#packages" },
+  { label: "Case study", href: "#portfolio" },
   { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Work", href: "#portfolio" },
   { label: "FAQ", href: "#faq" },
 ];
 
 const MENU_LINKS = [
-  { label: "Free 1-minute site check", href: "#site-check" },
-  { label: "About", href: "#about" },
+  { label: "Packages", href: "#packages" },
+  { label: "Case study", href: "#portfolio" },
   { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Work", href: "#portfolio" },
+  { label: "How we work", href: "#process" },
+  { label: "Free 1-minute site check", href: "#site-check" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
@@ -106,13 +103,13 @@ export default function Hero() {
             </span>
             <a
               href="#contact"
-              className="group flex items-center gap-2 bg-[#1E7FEB] hover:bg-[#1663C4] text-white text-[13px] font-medium rounded-full pl-5 pr-2 py-2 transition-colors duration-300"
+              className="group flex shrink-0 whitespace-nowrap items-center gap-2 bg-[#1A6FD0] hover:bg-[#155BB0] text-white text-[13px] font-medium rounded-full pl-5 pr-2 py-2 transition-colors duration-300"
             >
               <TextRoll text="Get in touch" />
               <span className="w-6 h-6 rounded-full bg-white flex items-center justify-center">
                 <ArrowRight
                   size={14}
-                  className={`text-[#1E7FEB] transition-transform duration-500 ${EASE} group-hover:-rotate-45`}
+                  className={`text-[#1A6FD0] transition-transform duration-500 ${EASE} group-hover:-rotate-45`}
                 />
               </span>
             </a>
@@ -168,11 +165,11 @@ export default function Hero() {
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
-            className="group mt-8 flex items-center justify-between bg-[#1E7FEB] hover:bg-[#1663C4] text-white text-[15px] font-medium rounded-full pl-6 pr-2 py-3 transition-colors"
+            className="group mt-8 flex items-center justify-between bg-[#1A6FD0] hover:bg-[#155BB0] text-white text-[15px] font-medium rounded-full pl-6 pr-2 py-3 transition-colors"
           >
             Get started
             <span className="w-9 h-9 rounded-full bg-white flex items-center justify-center">
-              <ArrowRight size={16} className="text-[#1E7FEB]" />
+              <ArrowRight size={16} className="text-[#1A6FD0]" />
             </span>
           </a>
         </div>
@@ -182,47 +179,44 @@ export default function Hero() {
         <div className="grid w-full items-center gap-8 lg:grid-cols-2 lg:gap-6">
           <div>
             <p className="font-mono text-[13px] sm:text-[14px] text-gray-900 tracking-wide mb-4 sm:mb-6">
-              JScholtz Digital
+              JScholtz Digital · AI-powered marketing agency
             </p>
 
-            <TypeLine
-              as="h1"
-              text="Secure. Simple. Remote-first."
-              className="font-medium leading-[0.98] tracking-[-0.03em] text-gray-900 min-h-[1.2em]"
-              style={{ fontSize: "clamp(2.7rem, 10vw, 4.8rem)" }}
-            />
+            <h1 className="font-medium leading-[1.02] tracking-[-0.03em] text-gray-900 max-w-[16ch]" style={{ fontSize: "clamp(2.1rem, 6.4vw, 4.1rem)" }}>
+              AI-powered digital marketing for South Africa's most successful businesses.
+            </h1>
 
-            <p className="mt-4 text-[15px] sm:text-[18px] leading-snug text-gray-800">
-              I work with small businesses worldwide.
+            <p className="mt-4 text-[15px] sm:text-[18px] leading-snug text-gray-800 max-w-xl">
+              Meta ads with AI video creatives, websites, website security checks and Google Business Profile setup, in one package.
             </p>
 
-            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-4 sm:gap-x-5 sm:gap-y-4">
               <a
                 href="#contact"
-                className="group flex items-center gap-2 bg-[#1E7FEB] hover:bg-[#1663C4] text-white text-[13px] sm:text-[14px] rounded-full pl-5 sm:pl-6 pr-2 py-2 transition-colors duration-300"
+                className="group flex shrink-0 whitespace-nowrap items-center gap-2 bg-[#1A6FD0] hover:bg-[#155BB0] text-white text-[13px] sm:text-[14px] rounded-full pl-5 sm:pl-6 pr-2 py-2 transition-colors duration-300"
               >
                 <TextRoll text="Get started" />
                 <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center">
                   <ArrowRight
                     size={16}
-                    className={`text-[#1E7FEB] transition-transform duration-500 ${EASE} group-hover:-rotate-45`}
+                    className={`text-[#1A6FD0] transition-transform duration-500 ${EASE} group-hover:-rotate-45`}
                   />
                 </span>
               </a>
 
               <a
                 href="#site-check"
-                className="flex items-center min-h-[48px] bg-white border-2 border-[#1E7FEB] text-[#1E7FEB] text-[15px] font-medium rounded-full px-5 hover:bg-[#EAF3FE] transition-colors"
+                className="flex shrink-0 whitespace-nowrap items-center min-h-[48px] bg-white border-2 border-[#1A6FD0] text-[#1A6FD0] text-[15px] font-medium rounded-full px-5 hover:bg-[#EAF3FE] transition-colors"
               >
                 Free 1-minute site check
               </a>
 
               <a
-                href="#portfolio"
-                className="group flex items-center gap-1.5 text-[13px] sm:text-[14px] text-gray-900 font-medium"
+                href="#packages"
+                className="group flex shrink-0 whitespace-nowrap items-center gap-1.5 text-[13px] sm:text-[14px] text-gray-900 font-medium"
               >
                 <span className="group-hover:underline underline-offset-4">
-                  View work
+                  See the packages
                 </span>
                 <ArrowRight
                   size={14}
@@ -230,8 +224,8 @@ export default function Hero() {
                 />
               </a>
 
-              <div className="flex items-center gap-2 bg-white rounded-[4px] px-3 py-2 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-                <MapPin size={16} className="text-[#1E7FEB]" aria-hidden="true" />
+              <div className="flex shrink-0 items-center gap-2 bg-white rounded-[4px] px-3 py-2 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+                <MapPin size={16} className="text-[#1A6FD0]" aria-hidden="true" />
                 <span className="text-[13px] sm:text-[14px] font-medium text-gray-900">
                   Based in Secunda, South Africa
                 </span>
@@ -240,7 +234,7 @@ export default function Hero() {
           </div>
 
           <div aria-hidden="true">
-            <HeroDashboard />
+            <AdCreativePanel />
           </div>
         </div>
       </div>

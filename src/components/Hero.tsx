@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Clock, MapPin, Menu, X } from "lucide-react";
+import { ArrowRight, CalendarDays, Clock, MapPin, Menu, X } from "lucide-react";
+import { CALENDLY_URL } from "../site";
 import AdCreativePanel from "./graphics/AdCreativePanel";
 import HeroBackdrop from "./HeroBackdrop";
 
@@ -210,6 +211,8 @@ export default function Hero() {
               >
                 Free 1-minute site check
               </a>
+
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="flex shrink-0 whitespace-nowrap items-center gap-2 min-h-[48px] bg-white border-2 border-[#1A6FD0] text-[#1A6FD0] text-[15px] font-medium rounded-full px-5 hover:bg-[#EAF3FE] transition-colors"><CalendarDays size={18} aria-hidden="true" />Book a 15-min call</a>
 
               <a
                 href="#packages"

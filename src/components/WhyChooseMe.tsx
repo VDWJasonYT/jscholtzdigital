@@ -1,4 +1,4 @@
-import { Clapperboard, Layers, ShieldCheck, MessageCircle } from "lucide-react";
+import { Repeat, Layers, ShieldCheck, MessageCircle } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { BadgeRow } from "./ui";
 
@@ -6,24 +6,24 @@ type Benefit = { icon: LucideIcon; title: string; desc: string };
 
 const BENEFITS: Benefit[] = [
   {
-    icon: Clapperboard,
-    title: "AI video creatives",
-    desc: "We make short video ads with AI video tools, so fresh creatives are part of every package.",
+    icon: Repeat,
+    title: "A monthly retainer",
+    desc: "Website care, your Google Business Profile, booking and enquiry flows, and ads, looked after together each month.",
   },
   {
     icon: Layers,
-    title: "One team, one system",
-    desc: "Ads, website, security and Google profile handled together, not by four different suppliers.",
+    title: "One partner",
+    desc: "The website, the profile, the ads and a custom app can sit with one team, instead of four suppliers.",
   },
   {
     icon: ShieldCheck,
-    title: "Security built in",
-    desc: "Every package includes a website security check, written up in plain English.",
+    title: "POPIA-aware",
+    desc: "We only use the details you send to reply to your enquiry, in line with POPIA. We do not sell or share them.",
   },
   {
     icon: MessageCircle,
-    title: "Honest reporting",
-    desc: "Clear scope before we start, and plain-language reports on what ran. No promises of guaranteed leads.",
+    title: "Plain-language reporting",
+    desc: "Clear scope before we start, and reports on what ran. No promises of guaranteed bookings.",
   },
 ];
 
@@ -36,9 +36,9 @@ export default function WhyChooseMe() {
           className="font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-10 sm:mb-14"
           style={{ fontSize: "clamp(1.5rem, 4vw, 3.2rem)" }}
         >
-          Built for businesses
+          Built for practices
           <br />
-          that want to grow.
+          that are with patients.
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {BENEFITS.map(({ icon: Icon, title, desc }) => (

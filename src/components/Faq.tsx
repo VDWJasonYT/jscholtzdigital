@@ -3,16 +3,24 @@ import { BadgeRow } from "./ui";
 
 export const QUESTIONS: { q: string; a: string }[] = [
   {
+    q: "Who do you work with?",
+    a: "Medical and dental practices across South Africa: GPs, dentists, physios, specialists and clinics.",
+  },
+  {
     q: "What is an AI video creative?",
-    a: "A short video ad for Facebook and Instagram that we create with AI video tools, based on your business, products and offers. You approve every creative before it runs.",
+    a: "A short video ad for Facebook and Instagram that we create with AI video tools, based on your practice. You approve every creative before it runs.",
   },
   {
     q: "How much do the packages cost?",
-    a: "Starter is R9,500 setup then R8,500/mo, Growth is R18,000 setup then R9,500/mo, and Premium is R38,000 setup then R15,000/mo. Every package has a 50% deposit on setup, the first month paid upfront and a 3-month minimum.",
+    a: "Practice Starter is R9,500 setup then R8,500/mo, Practice Growth is R18,000 setup then R9,500/mo, and Practice Premium is R38,000 setup then R15,000/mo. Every package has a 50% deposit on setup, the first month paid upfront and a 3-month minimum.",
+  },
+  {
+    q: "What do custom practice apps cost?",
+    a: "Custom practice apps start from R80,000 and are quoted per project. That includes work such as a patient booking or reminder app, or a practice portal.",
   },
   {
     q: "What do Basic Care and Secure Care include?",
-    a: "Basic Care covers hosting checks, updates, backups and small text edits. Secure Care is everything in Basic Care, plus a monthly security scan, malware cleanup and priority support. Starter includes Basic Care; Growth and Premium include Secure Care.",
+    a: "Basic Care covers hosting checks, updates, backups and small text edits. Secure Care is everything in Basic Care, plus a monthly security scan, malware cleanup and priority support. Practice Starter includes Basic Care. Practice Growth and Practice Premium include Secure Care.",
   },
   {
     q: "Is ad spend included?",
@@ -20,11 +28,11 @@ export const QUESTIONS: { q: string; a: string }[] = [
   },
   {
     q: "Do you guarantee leads or sales?",
-    a: "No. Nobody can honestly guarantee results from ads. We agree clear goals with you, track them, and report on what ran in plain language.",
+    a: "No. Nobody can honestly guarantee booked patients. We agree clear goals with you, track them, and report on what ran in plain language.",
   },
   {
-    q: "Can you take over my existing website or ad account?",
-    a: "Yes. We first check that you own and can access the site and accounts. Then we explain what to keep, what to fix, and whether a rebuild is the better path.",
+    q: "Can you take over our existing practice website or ad account?",
+    a: "Yes. We first check that the practice owns and can access the site and accounts. Then we explain what to keep, what to fix, and whether a rebuild is the better path.",
   },
   {
     q: "What is a website security check?",
@@ -32,7 +40,7 @@ export const QUESTIONS: { q: string; a: string }[] = [
   },
   {
     q: "Where are you based?",
-    a: "We are based in Secunda, Mpumalanga, and work remote-first with businesses across South Africa.",
+    a: "We are based in Secunda, Mpumalanga, and work remote-first with medical and dental practices across South Africa.",
   },
 ];
 

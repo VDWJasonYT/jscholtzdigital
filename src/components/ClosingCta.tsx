@@ -17,7 +17,7 @@ export default function ClosingCta() {
           className="font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 max-w-4xl"
           style={{ fontSize: "clamp(1.75rem, 4.4vw, 3.6rem)" }}
         >
-          Ready to grow with AI-powered marketing?
+          Ready for a digital partner your practice can call on?
         </h2>
         <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap items-start gap-4">
         <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#1A6FD0] hover:bg-[#155BB0] text-white text-[14px] sm:text-[15px] font-medium rounded-full px-6 py-3.5 transition-colors duration-300 text-center"><CalendarDays size={18} aria-hidden="true" />Book a 15-min call</a>

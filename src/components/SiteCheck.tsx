@@ -16,12 +16,12 @@ export default function SiteCheck() {
 
   function submit(e: FormEvent) {
     e.preventDefault();
-    if (!business.trim()) return setError("Please add your business name.");
+    if (!business.trim()) return setError("Please add your practice name.");
     if (phone.replace(/\D/g, "").length < 9) return setError("Please add a valid WhatsApp number.");
     setError("");
     const text = [
       "Hi JScholtz Digital, I'd like a free 1-minute site check.",
-      `Business: ${business.trim()}`,
+      `Practice: ${business.trim()}`,
       `Website: ${noSite || !url.trim() ? "No website yet" : url.trim()}`,
       `My WhatsApp: ${phone.trim()}`,
     ].join("\n");
@@ -38,8 +38,8 @@ export default function SiteCheck() {
           Free 1-minute site check
         </h2>
         <p className="mt-3 text-[16px] leading-relaxed text-gray-700">
-          Tell us your business and website. We'll look at it on a phone and WhatsApp you a short, honest check: speed,
-          mobile view, security basics and how easy it is to contact you. No website yet? That's fine too.
+          Tell us your practice and website. We'll look at it on a phone and WhatsApp you a short, honest check: speed,
+          mobile view, security basics and how easy it is for a patient to contact you. No website yet? That's fine too.
         </p>
 
         {sentLink ? (
@@ -59,8 +59,8 @@ export default function SiteCheck() {
         ) : (
           <form onSubmit={submit} noValidate className="mt-8 flex flex-col gap-5 rounded-2xl bg-[#F5F5F5] p-5 sm:p-7">
             <label className="flex flex-col gap-2 text-[15px] font-medium text-gray-900">
-              Business name
-              <input className={inputClass} value={business} maxLength={120} onChange={(e) => setBusiness(e.target.value)} autoComplete="organization" placeholder="e.g. your business name" />
+              Practice name
+              <input className={inputClass} value={business} maxLength={120} onChange={(e) => setBusiness(e.target.value)} autoComplete="organization" placeholder="e.g. your practice name" />
             </label>
             <label className="flex flex-col gap-2 text-[15px] font-medium text-gray-900">
               Website address <span className="font-normal text-gray-600">(optional)</span>

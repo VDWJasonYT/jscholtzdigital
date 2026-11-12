@@ -6,7 +6,9 @@ import { WHATSAPP_URL } from "../site";
 
 /*
  * Package scope and rand prices approved by Jason (11 Nov 2026).
- * ZAR only on this agency site. Ad spend is always extra, paid by the client to Meta.
+ * Card names are Practice Starter, Practice Growth and Practice Premium.
+ * Amounts are unchanged. ZAR only. Ad spend is always extra, paid by the client to Meta.
+ * Custom practice apps start from R80,000, quoted per project.
  */
 type Package = {
   name: string;
@@ -19,12 +21,12 @@ type Package = {
 
 const PACKAGES: Package[] = [
   {
-    name: "Starter",
-    tagline: "Get found and start advertising.",
+    name: "Practice Starter",
+    tagline: "Get the practice found, and start advertising.",
     setup: "R9,500",
     monthly: "R8,500",
     includes: [
-      "Landing page",
+      "Practice landing page",
       "Website security check",
       "Google Business Profile setup",
       "Meta ads on Facebook and Instagram",
@@ -33,13 +35,13 @@ const PACKAGES: Package[] = [
     ],
   },
   {
-    name: "Growth",
-    tagline: "More pages, plus retargeting.",
+    name: "Practice Growth",
+    tagline: "More pages for the practice, plus retargeting.",
     setup: "R18,000",
     monthly: "R9,500",
     featured: true,
     includes: [
-      "5-page website",
+      "5-page practice website",
       "Website security check",
       "Google Business Profile setup",
       "Meta ads plus retargeting",
@@ -48,12 +50,12 @@ const PACKAGES: Package[] = [
     ],
   },
   {
-    name: "Premium",
-    tagline: "The full system, actively managed.",
+    name: "Practice Premium",
+    tagline: "The full practice system, actively managed.",
     setup: "R38,000",
     monthly: "R15,000",
     includes: [
-      "Website with booking",
+      "Practice website with booking",
       "Full security audit",
       "12 AI video creatives a month",
       "Up to 3 Meta ad campaigns",
@@ -78,7 +80,7 @@ const STANDALONE: { title: string; price: string; note?: string }[] = [
   { title: "Website security check", price: "R2,500" },
   { title: "Facebook Ad Generation", price: "R7,500/mo", note: "Ad spend excluded, 3-month minimum" },
   { title: "Maintenance", price: "R700/mo" },
-  { title: "Apps", price: "Quoted per project" },
+  { title: "Custom practice apps", price: "from R80,000", note: "Quoted per project" },
 ];
 
 function packageLink(name: string) {
@@ -88,11 +90,11 @@ function packageLink(name: string) {
 
 const CARE_PLANS = [
   {
-    name: "Basic Care (Starter)",
+    name: "Basic Care (Practice Starter)",
     detail: "Hosting checks, updates, backups and small text edits.",
   },
   {
-    name: "Secure Care (Growth and Premium)",
+    name: "Secure Care (Practice Growth and Practice Premium)",
     detail: "Everything in Basic Care, plus a monthly security scan, malware cleanup and priority support.",
   },
 ];
@@ -122,12 +124,12 @@ export default function Pricing() {
           className="font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-4 max-w-3xl"
           style={{ fontSize: "clamp(1.5rem, 4vw, 3.2rem)" }}
         >
-          Starter, Growth and Premium.
+          Practice Starter, Practice Growth and Practice Premium.
         </h2>
         <p className="text-[15px] sm:text-[16px] text-gray-600 max-w-2xl mb-10 sm:mb-14">
-          Every package combines ads, website, security and Google presence. All prices in rand.
-          Ad spend is always extra and paid by you straight to Meta, with R3,000 a month suggested as
-          the minimum.
+          Monthly retainers for South African practices. Every package combines ads, a website,
+          security and your Google presence. All prices in rand. Ad spend is always extra and paid
+          by you straight to Meta, with R3,000 a month suggested as the minimum.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6">
@@ -215,7 +217,7 @@ export default function Pricing() {
             Standalone services
           </h3>
           <p className="mt-2 text-[14px] sm:text-[15px] text-gray-600 max-w-2xl">
-            Need just one thing? These are available on their own.
+            Need one part on its own? These are available outside a retainer. Custom practice apps start from R80,000 and are quoted per project.
           </p>
           <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3">
             {STANDALONE.map((item) => (

@@ -28,7 +28,7 @@ export default function Footer() {
               <span className="text-[16px] font-semibold">JScholtz Digital</span>
             </div>
             <p className="mt-4 text-[14px] text-gray-300 max-w-xs">
-              AI-powered digital marketing agency: Meta ads with AI video creatives, websites, website security checks and Google Business Profile setup. Based in Secunda, South Africa.
+              Digital partner for medical and dental practices across South Africa. Monthly retainers for website care, Google Business Profile, patient booking and ads, plus custom practice apps. Based in Secunda.
             </p>
           </div>
 

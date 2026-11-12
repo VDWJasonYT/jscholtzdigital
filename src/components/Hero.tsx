@@ -96,7 +96,7 @@ export default function Hero() {
           {/* Right (desktop) */}
           <div className="hidden md:flex items-center gap-4 pr-1">
             <span className="hidden lg:inline text-[13px] text-gray-600">
-              Taking on new projects
+              Taking on new practices
             </span>
             <span className="flex items-center gap-1.5 text-[13px] text-gray-600">
               <Clock size={14} />
@@ -180,15 +180,15 @@ export default function Hero() {
         <div className="grid w-full items-center gap-8 lg:grid-cols-2 lg:gap-6">
           <div>
             <p className="font-mono text-[13px] sm:text-[14px] text-gray-900 tracking-wide mb-4 sm:mb-6">
-              JScholtz Digital · AI-powered marketing agency
+              JScholtz Digital · For SA medical and dental practices
             </p>
 
             <h1 className="font-medium leading-[1.02] tracking-[-0.03em] text-gray-900 max-w-[16ch]" style={{ fontSize: "clamp(2.1rem, 6.4vw, 4.1rem)" }}>
-              AI-powered digital marketing for South Africa's most successful businesses.
+              More booked patients. A trusted presence for your practice.
             </h1>
 
             <p className="mt-4 text-[15px] sm:text-[18px] leading-snug text-gray-800 max-w-xl">
-              Meta ads with AI video creatives, websites, website security checks and Google Business Profile setup, in one package.
+              A digital partner for GPs, dentists, physios, specialists and clinics across South Africa. Monthly retainers cover website care, Google Business Profile, patient booking and enquiry flows, and ads. Custom practice apps start from R80,000, quoted per project. A website is the usual starting point. Enquiries are handled in line with POPIA.
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-4 sm:gap-x-5 sm:gap-y-4">

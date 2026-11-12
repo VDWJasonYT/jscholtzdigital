@@ -1,5 +1,5 @@
-import { MessageCircle } from "lucide-react";
-import { WHATSAPP_QUOTE_URL } from "../site";
+import { CalendarDays, MessageCircle } from "lucide-react";
+import { CALENDLY_URL, WHATSAPP_QUOTE_URL } from "../site";
 import SectionTexture from "./SectionTexture";
 import Reveal from "./Reveal";
 
@@ -19,15 +19,18 @@ export default function ClosingCta() {
         >
           Ready to grow with AI-powered marketing?
         </h2>
+        <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap items-start gap-4">
+        <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#1A6FD0] hover:bg-[#155BB0] text-white text-[14px] sm:text-[15px] font-medium rounded-full px-6 py-3.5 transition-colors duration-300 text-center"><CalendarDays size={18} aria-hidden="true" />Book a 15-min call</a>
         <a
           href={WHATSAPP_QUOTE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center justify-center gap-2 bg-[#1A6FD0] hover:bg-[#155BB0] text-white text-[14px] sm:text-[15px] font-medium rounded-full px-6 py-3.5 transition-colors duration-300 text-center"
+          className="inline-flex items-center justify-center gap-2 bg-white border-2 border-[#1A6FD0] hover:bg-[#EAF3FE] text-[#1A6FD0] text-[14px] sm:text-[15px] font-medium rounded-full px-6 py-3.5 transition-colors duration-300 text-center"
         >
           <MessageCircle size={18} aria-hidden="true" />
           Prefer a quick conversation? Chat on WhatsApp
         </a>
+        </div>
         </Reveal>
       </div>
     </section>

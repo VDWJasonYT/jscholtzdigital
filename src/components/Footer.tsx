@@ -2,12 +2,13 @@ import { EMAIL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "../site";
 import SectionTexture from "./SectionTexture";
 
 const LINKS = [
-    { label: "Services", href: "#services" },
+  { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
   { label: "Packages", href: "#packages" },
   { label: "Case study", href: "#portfolio" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
+  { label: "Privacy policy", href: "/privacy" },
 ];
 
 export default function Footer() {

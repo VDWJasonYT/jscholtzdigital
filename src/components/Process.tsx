@@ -5,14 +5,14 @@ const STEPS: { step: string; title: string; line: string; icon: ProcessIcon; til
   {
     step: "01",
     title: "Understand",
-    line: "We look at your business, your customers, and your current ads, website and Google profile.",
+    line: "We look at the practice, how patients find you, and your current website, Google profile and ads.",
     icon: "chat",
     tilt: -7,
   },
   {
     step: "02",
     title: "Build",
-    line: "We set up your website, profile and campaigns, and make AI video creatives for you to approve.",
+    line: "We set up the website, booking and enquiry paths, Google profile and campaigns, and make AI video creatives for you to approve.",
     icon: "browser",
     tilt: 6,
   },
@@ -68,7 +68,7 @@ export default function Process() {
             <li>We handle enquiries online, by WhatsApp, email or the form below.</li>
             <li>Discovery calls take 20 to 30 minutes.</li>
             <li>We send proposals and quotes digitally.</li>
-            <li>We meet in person only when there is a good business reason.</li>
+            <li>We meet at the practice only when there is a good reason to.</li>
           </ul>
         </div>
       </div>

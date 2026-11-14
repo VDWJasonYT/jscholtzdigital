@@ -50,11 +50,11 @@ export default function AdCreativePanel() {
       </div>
 
       <div className="absolute left-[4%] bottom-[12%] w-[44%] rounded-2xl bg-[#111827] p-3 sm:p-4 grad-card-dark">
-        <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wide text-gray-300">Also in the package</p>
+        <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wide text-gray-300">Also on the retainer</p>
         <ul className="mt-2 space-y-1 text-[11px] sm:text-[12px] font-medium text-white">
-          <li>Website</li>
-          <li>Security check</li>
-          <li>Google Business Profile</li>
+          <li>Website care</li>
+          <li>Google profile</li>
+          <li>Booking flows</li>
         </ul>
       </div>
     </div>

@@ -39,7 +39,7 @@ const METHODS: Method[] = [
   },
 ];
 
-const STEP_TITLES = ["", "What do you need?", "Your business", "The project", "How we reach you"];
+const STEP_TITLES = ["", "What do you need?", "Your practice", "The project", "How we reach you"];
 
 const inputClass =
   "w-full rounded-xl border border-gray-200 px-4 py-3 text-[14px] outline-none focus:border-[#1A6FD0] transition-colors";
@@ -67,7 +67,7 @@ export default function Contact() {
   const validate = (current: number): string => {
     if (current === 1 && !enquiry.service) return "Choose the service you need.";
     if (current === 2 && (!enquiry.business.trim() || !enquiry.town.trim() || !enquiry.about.trim())) {
-      return "Add your business name, town and what you do.";
+      return "Add the practice name, town and what you do.";
     }
     if (current === 3 && !enquiry.details.trim()) return "Tell us a little about the project.";
     if (current === 4) {
@@ -121,7 +121,7 @@ export default function Contact() {
           className="font-medium leading-[1.08] tracking-[-0.03em] text-white mb-6"
           style={{ fontSize: "clamp(2.25rem, 5vw, 4.2rem)" }}
         >
-          Tell us what you need.
+          Tell us about the practice.
         </h2>
 
         <p className="text-[15px] sm:text-[16px] text-gray-400 max-w-xl mb-10 sm:mb-14">
@@ -226,7 +226,7 @@ export default function Contact() {
 
               {step === 2 && (
                 <div className="flex flex-col gap-4">
-                  <Field label="Business name" id="business">
+                  <Field label="Practice name" id="business">
                     <input
                       id="business"
                       maxLength={120}
@@ -234,7 +234,7 @@ export default function Contact() {
                       onChange={(e) => set("business", e.target.value)}
                       className={inputClass}
                       autoComplete="organization"
-                      placeholder="The business name"
+                      placeholder="The practice name"
                     />
                   </Field>
                   <Field label="Town or area" id="town">
@@ -248,14 +248,14 @@ export default function Contact() {
                       placeholder="Your town or city"
                     />
                   </Field>
-                  <Field label="What does the business do?" id="business-about">
+                  <Field label="What kind of practice is it?" id="business-about">
                     <input
                       id="business-about"
                       maxLength={200}
                       value={enquiry.about}
                       onChange={(e) => set("about", e.target.value)}
                       className={inputClass}
-                      placeholder="A short description"
+                      placeholder="GP, dental, physio, specialist or clinic"
                     />
                   </Field>
                 </div>

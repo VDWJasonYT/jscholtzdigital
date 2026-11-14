@@ -1,11 +1,11 @@
 import { WHATSAPP_E164 } from "./site";
 
 export const SERVICE_OPTIONS = [
-  "Meta ads + AI video",
-  "Website",
-  "Security check",
+  "Practice website",
+  "Booking and enquiries",
   "Google Business Profile",
-  "Full package",
+  "Monthly retainer",
+  "Custom practice app",
 ] as const;
 
 export type ServiceOption = (typeof SERVICE_OPTIONS)[number];
@@ -48,7 +48,7 @@ export function enquiryBody(enquiry: Enquiry): string {
     `Service: ${enquiry.service}`,
     `Business: ${enquiry.business}`,
     `Town: ${enquiry.town}`,
-    `About the business: ${enquiry.about}`,
+    `About the practice: ${enquiry.about}`,
     `Project: ${enquiry.details}`,
   ];
   if (enquiry.website.trim()) lines.push(`Current website: ${enquiry.website.trim()}`);

@@ -1,4 +1,4 @@
-import { Clapperboard, Monitor, Shield, Store } from "lucide-react";
+import { CalendarCheck, Monitor, Repeat, Smartphone, Store } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { BadgeRow } from "./ui";
 import Reveal from "./Reveal";
@@ -7,24 +7,29 @@ type Service = { icon: LucideIcon; title: string; desc: string };
 
 const SERVICES: Service[] = [
   {
-    icon: Clapperboard,
-    title: "Meta ads with AI video creatives",
-    desc: "Facebook and Instagram campaigns, with short video ads we create using AI video tools. You approve every creative before it runs.",
-  },
-  {
     icon: Monitor,
-    title: "Websites",
-    desc: "Fast, mobile-first websites with click-to-call, WhatsApp and clear enquiry paths, so the people your ads reach can act.",
+    title: "Practice websites",
+    desc: "A fast, mobile-first website for your rooms, with click-to-call, WhatsApp and a clear way for patients to enquire. This is where most practices start.",
   },
   {
-    icon: Shield,
-    title: "Website security checks",
-    desc: "A passive outside review of your site, written up in plain English. Active testing only with your written permission.",
+    icon: CalendarCheck,
+    title: "Patient booking & enquiry flows",
+    desc: "Booking and enquiry paths that match how the practice actually works, from a simple form through to a flow built around your diary.",
   },
   {
     icon: Store,
-    title: "Google Business Profile setup",
-    desc: "Your profile set up properly so customers can find you on Google Search and Maps.",
+    title: "Google Business Profile & reviews",
+    desc: "Your Google Business Profile set up so patients can find the practice on Search and Maps, with a clear link to the reviews you already have.",
+  },
+  {
+    icon: Repeat,
+    title: "Monthly growth retainers",
+    desc: "Website care, Google Business Profile, patient booking and enquiry flows, and ads management, looked after each month while you are with patients.",
+  },
+  {
+    icon: Smartphone,
+    title: "Custom practice apps",
+    desc: "Patient booking and reminder apps, practice portals and other software for your rooms. Custom practice apps start from R80,000, quoted per project.",
   },
 ];
 
@@ -37,15 +42,15 @@ export default function Services() {
           className="font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-4 max-w-4xl"
           style={{ fontSize: "clamp(1.5rem, 4vw, 3.2rem)" }}
         >
-          Ads that get seen, and a website that turns attention into enquiries.
+          What a busy practice no longer has to do alone.
         </h2>
         <p className="text-[15px] sm:text-[16px] text-gray-600 max-w-2xl mb-10 sm:mb-14">
-          JScholtz Digital is an AI-powered digital marketing agency for ambitious South African
-          businesses, based in Secunda, Mpumalanga. We bring your ads, website, security and Google
-          presence together, so they work as one system.
+          JScholtz Digital is a digital partner for medical and dental practices across South Africa,
+          based in Secunda, Mpumalanga. Monthly retainers and custom apps carry the ongoing work.
+          A practice website is the usual way in.
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {SERVICES.map(({ icon: Icon, title, desc }) => (
             <Reveal key={title}>
               <div className="group grad-card rounded-2xl p-6 h-full transition-colors duration-300">

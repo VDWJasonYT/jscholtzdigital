@@ -1,4 +1,4 @@
-import { CALENDLY_URL, EMAIL, LINKEDIN_URL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "../site";
+import { CALENDLY_URL, EMAIL, GOOGLE_PROFILE_URL, LINKEDIN_URL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "../site";
 import SectionTexture from "./SectionTexture";
 
 const LINKS = [
@@ -8,6 +8,11 @@ const LINKS = [
   { label: "Case study", href: "#portfolio" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
+  { label: "Dental website design", href: "/dental-website-design/" },
+  { label: "Medical practice websites", href: "/medical-practice-website-design/" },
+  { label: "Dental marketing", href: "/dental-marketing-south-africa/" },
+  { label: "POPIA for practices", href: "/popia-websites-for-practices/" },
+  { label: "Modern Dental case study", href: "/work/modern-dental/" },
   { label: "Privacy policy", href: "/privacy/" },
 ];
 
@@ -72,6 +77,14 @@ export default function Footer() {
               className="text-white hover:text-[#4DA3FF] transition-colors"
             >
               LinkedIn
+            </a>
+            <a
+              href={GOOGLE_PROFILE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#4DA3FF] transition-colors"
+            >
+              Google profile
             </a>
           </div>
         </div>

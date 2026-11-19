@@ -1,4 +1,4 @@
-import { CALENDLY_URL, EMAIL, LINKEDIN_URL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "../site";
+import { CALENDLY_URL, EMAIL, GOOGLE_PROFILE_URL, LINKEDIN_URL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "../site";
 import SectionTexture from "./SectionTexture";
 
 const LINKS = [
@@ -77,6 +77,14 @@ export default function Footer() {
               className="text-white hover:text-[#4DA3FF] transition-colors"
             >
               LinkedIn
+            </a>
+            <a
+              href={GOOGLE_PROFILE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#4DA3FF] transition-colors"
+            >
+              Google profile
             </a>
           </div>
         </div>

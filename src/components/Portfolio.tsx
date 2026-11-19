@@ -3,15 +3,15 @@ import { BadgeRow } from "./ui";
 
 const MODERN_DENTAL_URL = "https://moderndental.co.za/";
 
-/** Only features visible on the live moderndental.co.za site. */
+/** Only features visible on moderndental.co.za on 19 November 2026. */
 const MODERN_DENTAL_BUILT = [
-  "Service pages for each treatment",
+  "Service pages for treatments",
   "Photo gallery",
+  "Events page",
   "Contact page with click-to-call",
   "WhatsApp button",
   "Google Maps link to the practice",
-  "Reviews section linking to Google and Facebook",
-  "Facebook page link",
+  "Links to Facebook and Instagram",
 ];
 
 /** lucide "Link" icon, drawn manually with two arc paths. */
@@ -118,6 +118,11 @@ export default function Portfolio() {
             </p>
           </div>
         </a>
+        <p className="mt-6 text-[15px]">
+          <a href="/work/modern-dental/" className="font-medium text-[#1A6FD0] hover:text-[#155BB0]">
+            Read the Modern Dental case study
+          </a>
+        </p>
         </div>
 
       </div>

@@ -8,6 +8,11 @@ const LINKS = [
   { label: "Case study", href: "#portfolio" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
+  { label: "Dental website design", href: "/dental-website-design/" },
+  { label: "Medical practice websites", href: "/medical-practice-website-design/" },
+  { label: "Dental marketing", href: "/dental-marketing-south-africa/" },
+  { label: "POPIA for practices", href: "/popia-websites-for-practices/" },
+  { label: "Modern Dental case study", href: "/work/modern-dental/" },
   { label: "Privacy policy", href: "/privacy/" },
 ];
 

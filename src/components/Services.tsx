@@ -44,11 +44,20 @@ export default function Services() {
         >
           What a busy practice no longer has to do alone.
         </h2>
-        <p className="text-[15px] sm:text-[16px] text-gray-600 max-w-2xl mb-10 sm:mb-14">
+        <p className="text-[15px] sm:text-[16px] text-gray-600 max-w-2xl mb-6">
           JScholtz Digital is a digital partner for medical and dental practices across South Africa,
           based in Secunda, Mpumalanga. Monthly retainers and custom apps carry the ongoing work.
           A practice website is the usual way in.
         </p>
+        <nav aria-label="Practice pages" className="mb-10 sm:mb-14">
+          <ul className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
+            <li><a href="/dental-website-design/" className="text-[15px] font-medium text-[#1A6FD0] hover:text-[#155BB0]">Dental website design</a></li>
+            <li><a href="/medical-practice-website-design/" className="text-[15px] font-medium text-[#1A6FD0] hover:text-[#155BB0]">Medical practice websites</a></li>
+            <li><a href="/dental-marketing-south-africa/" className="text-[15px] font-medium text-[#1A6FD0] hover:text-[#155BB0]">Dental marketing</a></li>
+            <li><a href="/popia-websites-for-practices/" className="text-[15px] font-medium text-[#1A6FD0] hover:text-[#155BB0]">POPIA for practices</a></li>
+            <li><a href="/work/modern-dental/" className="text-[15px] font-medium text-[#1A6FD0] hover:text-[#155BB0]">Modern Dental case study</a></li>
+          </ul>
+        </nav>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {SERVICES.map(({ icon: Icon, title, desc }) => (

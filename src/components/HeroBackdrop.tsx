@@ -7,9 +7,10 @@ export default function HeroBackdrop() {
       <div className="absolute inset-0 bg-[#EFEFEF]" />
       <img
         src={HERO_POSTER}
-        alt=""
+        alt="Navy background of bright blue circuit traces behind the homepage headline"
         width={1344}
         height={768}
+        loading="eager"
         decoding="async"
         fetchPriority="high"
         className="absolute inset-0 h-full w-full object-cover opacity-30"

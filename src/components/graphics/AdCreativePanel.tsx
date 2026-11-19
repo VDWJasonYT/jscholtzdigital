@@ -12,7 +12,7 @@ export default function AdCreativePanel() {
             alt=""
             width={1344}
             height={768}
-            loading="lazy"
+            loading="eager"
             decoding="async"
             className="absolute inset-0 h-full w-full object-cover"
           />

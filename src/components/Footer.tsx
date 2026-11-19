@@ -1,4 +1,4 @@
-import { EMAIL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "../site";
+import { CALENDLY_URL, EMAIL, LINKEDIN_URL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "../site";
 import SectionTexture from "./SectionTexture";
 
 const LINKS = [
@@ -8,7 +8,7 @@ const LINKS = [
   { label: "Case study", href: "#portfolio" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
-  { label: "Privacy policy", href: "/privacy" },
+  { label: "Privacy policy", href: "/privacy/" },
 ];
 
 export default function Footer() {
@@ -56,6 +56,22 @@ export default function Footer() {
             </a>
             <a href={`mailto:${EMAIL}`} className="text-white hover:text-[#4DA3FF] transition-colors break-all">
               {EMAIL}
+            </a>
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#4DA3FF] transition-colors"
+            >
+              Book a 15-min call
+            </a>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#4DA3FF] transition-colors"
+            >
+              LinkedIn
             </a>
           </div>
         </div>

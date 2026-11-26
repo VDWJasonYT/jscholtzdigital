@@ -32,7 +32,7 @@ The build is a static site in `dist/`. Drop it on any static host:
 | What | Where |
 | --- | --- |
 | Contact details (email, WhatsApp, LinkedIn) | `src/site.ts` |
-| Portfolio projects (Altyd Lekker, Narrativ, Luminar) | `src/components/Portfolio.tsx`: live client link, demo videos, titles, descriptions |
+| Portfolio, services, prices, FAQ | `src/data.ts` |
 | About images | `src/components/About.tsx` (`SMALL_IMG` / `LARGE_IMG`) |
 | Services & benefits copy | `src/components/Services.tsx`, `src/components/WhyChooseMe.tsx` |
 | Headline / hero copy | `src/components/Hero.tsx` |

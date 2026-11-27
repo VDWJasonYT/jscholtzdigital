@@ -7,14 +7,47 @@ import {
   CALENDLY_URL, EMAIL, GOOGLE_PROFILE_URL, LINKEDIN_URL, WHATSAPP_DISPLAY, WHATSAPP_QUOTE_URL, WHATSAPP_URL,
 } from "./site";
 import {
-  CARE_PLANS, FAQS, INDUSTRIES, PACKAGES, PACKAGE_TERMS, PROCESS, PROJECTS, SERVICES, STANDALONE, type Project,
+  CARE_PLANS, getFaqs, INDUSTRIES, PACKAGES, PACKAGE_TERMS, PROCESS, PROJECTS, SERVICES, STANDALONE, type Project,
 } from "./data";
+import { CurrencyProvider, currencyLabel, formatPrice, useCurrency, type Currency } from "./currency";
 
 const ICONS: Record<string, typeof FileText> = {
   page: FileText, pages: Files, app: LayoutDashboard, care: LifeBuoy, pin: MapPin, search: Search, ads: Megaphone, shield: ShieldCheck,
 };
 
 const wrap = "mx-auto w-full max-w-site px-5 sm:px-8 lg:px-10";
+
+function CurrencyToggle({ variant = "light", size = "default" }: { variant?: "light" | "dark"; size?: "default" | "compact" }) {
+  const { currency, setCurrency } = useCurrency();
+  const options: { id: Currency; label: string; name: string }[] = [
+    { id: "ZAR", label: "R", name: "Show prices in South African rand" },
+    { id: "USD", label: "$", name: "Show prices in US dollars" },
+  ];
+  const compact = size === "compact";
+  return (
+    <div role="group" aria-label="Price currency" className={`inline-flex rounded-full p-1 ${variant === "dark" ? "bg-white/10" : "bg-ink/5"}`}>
+      {options.map((o) => {
+        const active = currency === o.id;
+        return (
+          <button
+            key={o.id}
+            type="button"
+            aria-pressed={active}
+            aria-label={o.name}
+            onClick={() => setCurrency(o.id)}
+            className={`rounded-full font-bold transition ${compact ? "h-8 min-w-8 px-2.5 text-[13px]" : "h-10 min-w-10 px-3.5 text-[15px]"} ${
+              active
+                ? variant === "dark" ? "bg-white text-ink" : "bg-ink text-white"
+                : variant === "dark" ? "text-white/70 hover:text-white" : "text-ink/55 hover:text-ink"
+            }`}
+          >
+            {o.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
 
 function useReveal() {
   useEffect(() => {
@@ -100,6 +133,7 @@ function Header() {
           </ul>
         </nav>
         <div className="flex items-center gap-2">
+          <CurrencyToggle variant="dark" size="compact" />
           <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-[14px] font-semibold text-ink transition hover:bg-brand hover:text-white">
             <CalendarDays className="h-4 w-4" aria-hidden="true" /> Book a call
           </a>
@@ -152,6 +186,7 @@ function PhoneFrame({ src, alt, className = "", eager = false }: { src: string; 
 }
 
 function Hero() {
+  const { currency } = useCurrency();
   return (
     <section id="top" className="relative overflow-hidden bg-ink text-white">
       <div className="dot-grid absolute inset-0" aria-hidden="true" />
@@ -173,7 +208,7 @@ function Hero() {
             </a>
           </div>
           <ul className="mt-10 grid max-w-xl grid-cols-1 gap-3 text-[14px] text-white/70 sm:grid-cols-3">
-            {["Real client sites, live now", "Mobile first, secure by default", "Prices in rand, USD on request"].map((t) => (
+            {["Real client sites, live now", "Mobile first, secure by default", currency === "USD" ? "Prices in US dollars" : "Prices in South African rand"].map((t) => (
               <li key={t} className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-light" aria-hidden="true" />{t}</li>
             ))}
           </ul>
@@ -271,16 +306,18 @@ function Work() {
 }
 
 function Services() {
+  const { currency } = useCurrency();
   return (
     <section id="services" className="scroll-mt-16 bg-paper py-24 sm:py-32">
       <div className={wrap}>
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHead eyebrow="Services" title={<>Everything your business needs <span className="text-brand">online.</span></>} />
-          <p className="reveal max-w-md text-[17px] leading-relaxed text-slate-600">Start with one service or combine them in a monthly package. Prices are in South African rand.</p>
+          <p className="reveal max-w-md text-[17px] leading-relaxed text-slate-600">Start with one service or combine them in a monthly package. {currencyLabel(currency)}</p>
         </div>
         <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map((s) => {
             const Icon = ICONS[s.icon];
+            const price = s.priceId ? formatPrice(s.priceId, currency) : "Ask for a quote";
             return (
               <li key={s.title} className="reveal group flex flex-col rounded-[22px] bg-white p-6 shadow-[0_1px_0_rgba(11,18,32,0.04),0_18px_40px_-28px_rgba(11,18,32,0.35)] transition hover:-translate-y-1 hover:bg-ink">
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-brand/10 text-brand transition group-hover:bg-brand group-hover:text-white">
@@ -288,7 +325,7 @@ function Services() {
                 </span>
                 <h3 className="mt-6 text-[19px] font-bold tracking-[-0.02em] text-ink transition group-hover:text-white">{s.title}</h3>
                 <p className="mt-2 flex-1 text-[15px] leading-relaxed text-slate-600 transition group-hover:text-white/70">{s.body}</p>
-                <p className="mt-6 text-[15px] font-bold text-brand transition group-hover:text-brand-light">{s.price}</p>
+                <p className="mt-6 text-[15px] font-bold text-brand transition group-hover:text-brand-light">{price}</p>
               </li>
             );
           })}
@@ -358,15 +395,21 @@ function pkgLink(name: string) {
 }
 
 function Pricing() {
+  const { currency } = useCurrency();
   return (
     <section id="pricing" className="scroll-mt-16 bg-paper py-24 sm:py-32">
       <span id="packages" className="sr-only" aria-hidden="true" />
       <div className={wrap}>
-        <SectionHead
-          eyebrow="Pricing"
-          title={<>Clear prices. <span className="text-brand">No surprises.</span></>}
-          intro={<>Monthly packages combine a website, security, your Google presence and ads. All prices are in South African rand (ZAR). <strong className="font-semibold text-ink">International clients: ask for a USD quote.</strong></>}
-        />
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
+          <SectionHead
+            eyebrow="Pricing"
+            title={<>Clear prices. <span className="text-brand">No surprises.</span></>}
+            intro={<>Monthly packages combine a website, security, your Google presence and ads. {currencyLabel(currency)}</>}
+          />
+          <div className="reveal shrink-0 sm:pt-8">
+            <CurrencyToggle />
+          </div>
+        </div>
         <div className="mt-14 grid gap-5 lg:grid-cols-3">
           {PACKAGES.map((p) => {
             const dark = p.featured;
@@ -376,10 +419,10 @@ function Pricing() {
                 <h3 className="text-[24px] font-extrabold tracking-[-0.03em]">{p.name}</h3>
                 <p className={`mt-1 text-[15px] ${dark ? "text-white/70" : "text-slate-600"}`}>{p.tagline}</p>
                 <p className="mt-8 flex items-baseline gap-1.5">
-                  <span className="text-[44px] font-extrabold leading-none tracking-[-0.05em]">{p.monthly}</span>
+                  <span className="text-[44px] font-extrabold leading-none tracking-[-0.05em]">{formatPrice(p.monthlyId, currency, { period: false })}</span>
                   <span className={`text-[15px] font-semibold ${dark ? "text-white/60" : "text-slate-500"}`}>/mo</span>
                 </p>
-                <p className={`mt-2 text-[14px] font-medium ${dark ? "text-white/70" : "text-slate-600"}`}>{p.setup} once-off setup</p>
+                <p className={`mt-2 text-[14px] font-medium ${dark ? "text-white/70" : "text-slate-600"}`}>{formatPrice(p.setupId, currency)} once-off setup</p>
                 <ul className="mt-8 grid flex-1 gap-3">
                   {p.includes.map((inc) => (
                     <li key={inc} className="flex items-start gap-3 text-[15px]">
@@ -396,7 +439,7 @@ function Pricing() {
           })}
         </div>
         <ul className="reveal mt-8 flex flex-wrap gap-2">
-          {[...PACKAGE_TERMS, "Ad spend extra, paid to Meta (R3,000/mo suggested minimum)"].map((t) => (
+          {[...PACKAGE_TERMS, `Ad spend extra, paid to Meta (${formatPrice("adSpend", currency)} suggested minimum)`].map((t) => (
             <li key={t} className="rounded-full bg-white px-3.5 py-2 text-[13px] font-semibold text-ink">{t}</li>
           ))}
         </ul>
@@ -420,14 +463,13 @@ function Pricing() {
             <p className="mt-3 text-[16px] text-slate-600">Need one part on its own? These are available outside a package.</p>
             <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">
               {STANDALONE.map((s) => (
-                <li key={s.title} className={`flex items-center justify-between gap-4 rounded-[18px] bg-white px-5 py-4 ${s.usd ? "sm:col-span-2" : ""}`}>
+                <li key={s.title} className={`flex items-center justify-between gap-4 rounded-[18px] bg-white px-5 py-4 ${s.note ? "sm:col-span-2" : ""}`}>
                   <span className="min-w-0">
                     <span className="block text-[15px] font-bold text-ink">{s.title}</span>
                     {s.note && <span className="mt-0.5 block text-[13px] text-slate-500">{s.note}</span>}
                   </span>
                   <span className="shrink-0 text-right">
-                    <span className="block text-[15px] font-bold text-brand">{s.price}</span>
-                    {s.usd && <span className="block text-[12px] font-semibold text-slate-500">{s.usd}</span>}
+                    <span className="block text-[15px] font-bold text-brand">{formatPrice(s.priceId, currency)}</span>
                   </span>
                 </li>
               ))}
@@ -466,12 +508,13 @@ function About() {
 }
 
 function Faq() {
+  const { currency } = useCurrency();
   return (
     <section id="faq" className="scroll-mt-16 bg-paper py-24 sm:py-32">
       <div className={`${wrap} grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16`}>
         <SectionHead eyebrow="FAQ" title={<>Questions, <span className="text-brand">answered.</span></>} intro={<>Something else? <a className="font-semibold text-brand underline underline-offset-4" href={WHATSAPP_QUOTE_URL} target="_blank" rel="noopener noreferrer">Ask us on WhatsApp</a>.</>} />
         <div className="reveal grid gap-3">
-          {FAQS.map((f) => (
+          {getFaqs(currency).map((f) => (
             <details key={f.q} className="group rounded-[20px] bg-white px-6 py-5 open:shadow-[0_18px_40px_-30px_rgba(11,18,32,0.45)]">
               <summary className="flex items-center justify-between gap-6 text-[17px] font-bold tracking-[-0.01em] text-ink">
                 {f.q}
@@ -526,7 +569,7 @@ function Contact() {
         <div className="reveal">
           <Eyebrow dark>Start a project</Eyebrow>
           <h2 className="h2 mt-5">Let's build something <span className="text-brand-light">that works.</span></h2>
-          <p className="mt-5 max-w-lg text-[18px] leading-relaxed text-white/70">Book a free 15-minute call, or send a message. We reply with clear next steps and a quote in rand, or in USD if you are outside South Africa.</p>
+          <p className="mt-5 max-w-lg text-[18px] leading-relaxed text-white/70">Book a free 15-minute call, or send a message. We reply with clear next steps and a quote in rand or US dollars.</p>
           <div className="mt-9"><PrimaryBtn href={CALENDLY_URL} external>Book a 15-min call</PrimaryBtn></div>
           <ul className="mt-12 grid gap-3 sm:grid-cols-2">
             <li><a href={WHATSAPP_QUOTE_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-2xl bg-white/[0.06] p-4 hover:bg-white/10"><MessageCircle className="h-5 w-5 text-brand-light" aria-hidden="true" /><span><span className="block text-[12px] font-semibold uppercase tracking-[0.12em] text-white/50">WhatsApp</span><span className="font-semibold">{WHATSAPP_DISPLAY}</span></span></a></li>
@@ -562,6 +605,7 @@ function Contact() {
 }
 
 function Footer() {
+  const { currency } = useCurrency();
   return (
     <footer className="bg-[#060A13] py-16 text-white/70">
       <div className={`${wrap} grid gap-12 md:grid-cols-[1.3fr_1fr_1fr_1fr]`}>
@@ -598,7 +642,7 @@ function Footer() {
       </div>
       <div className={`${wrap} mt-14 flex flex-col gap-2 text-[13px] text-white/45 sm:flex-row sm:justify-between`}>
         <p>© {new Date().getFullYear()} JScholtz Digital. All rights reserved.</p>
-        <p>Prices in ZAR. International clients: ask for a USD quote.</p>
+        <p>{currencyLabel(currency)}</p>
       </div>
     </footer>
   );
@@ -607,7 +651,7 @@ function Footer() {
 export default function App() {
   useReveal();
   return (
-    <>
+    <CurrencyProvider>
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-ink">Skip to content</a>
       <Header />
       <main id="main">
@@ -622,6 +666,6 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </CurrencyProvider>
   );
 }
